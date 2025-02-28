@@ -15,14 +15,14 @@ These papers focused on human BCR genes. For myriad reasons including the applic
 ## Contents
 - `generate_primers.py`: This script takes a FASTA file of target sequences (e.g. heavy chain V gene framework 1 sequences) and a handful of user provided parameters such as range of allowable primer length, number of allowable degenerate nucleotide positions, etc. It outputs suggested primers and their corresponding target sequences.
 
-- Any directories such as `IGHV`, `IGKC`, etc. include both the necessary input files for designing ferret primers (e.g. `IGHV_fwr1.fasta`, `IGKC_coding.fasta`) as well as the output from `generate_primers.py`
+- Any directories such as `IGHV`, `IGKC`, etc. include both the necessary input files for designing ferret primers (e.g. `ighv_fam1.fasta`, `IGKC_coding.fasta`) as well as the output from `generate_primers.py`
 
 - `environment.yml`: Conda environment i.e. dependencies file for ease of setup
 
 ## Helpful resources
 
-- **Getting targets gene sequences**: Assuming your organism's immunoglobulin genes have been sufficiently annotated. [IMGT's gene lookup tool](https://www.imgt.org/genedb/) is highly useful for acquiring the necessary V and C gene sequences/regions used as input for this repository's script(s). 
+- **Getting target gene sequences for your organism**: Assuming your organism's immunoglobulin genes have been sufficiently annotated. [IMGT's gene lookup tool](https://www.imgt.org/genedb/) is highly useful for acquiring the necessary V and C gene sequences/regions used as input for this repository's script(s). 
 
 - **Double checking primer targets**: The [Clustal Omega multiple sequence alignment tool](https://www.ebi.ac.uk/jdispatcher/msa/clustalo) is useful for a quick double-check that the primers suggested by `generate_primers.py` do target the user's desired location, and can provide information that informed any degenerate primer positions. 
 
-- **Simulating primer issues**: [IDT](https://www.idtdna.com/pages/tools/primerquest?utm_source=google&utm_medium=cpc&utm_campaign=00588_1i_03&utm_content=search&gad_source=1&gclid=Cj0KCQiA2oW-BhC2ARIsADSIAWqJSldnoqmAcMCrlltLo1xX62u5B97-xaWZbliHxkra0yiwiJ2StboaAhzLEALw_wcB) provides a number of tools for analyzing primer melting temperatures, undesirable secondary structures, etc. for multiplex PCR primer sets.
+- **Simulating primer behavior/issues**: [IDT](https://www.idtdna.com/pages/tools/primerquest?utm_source=google&utm_medium=cpc&utm_campaign=00588_1i_03&utm_content=search&gad_source=1&gclid=Cj0KCQiA2oW-BhC2ARIsADSIAWqJSldnoqmAcMCrlltLo1xX62u5B97-xaWZbliHxkra0yiwiJ2StboaAhzLEALw_wcB) provides a number of tools for analyzing primer melting temperatures, undesirable secondary structures, etc. for multiplex PCR primer sets.
