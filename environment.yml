@@ -1,4 +1,4 @@
-name: bcrseq_primers2
+name: bcrseq_primers
 channels:
   - conda-forge
   - bioconda
@@ -36,5 +36,3 @@ dependencies:
   - readline=8.2=h8c095d6_2
   - tk=8.6.13=noxft_h4845f30_101
   - tzdata=2025a=h78e105d_0
-prefix: 
-  /stor/work/Georgiou/lsh848/code_misc/conda_local_install/miniconda3/envs/bcrseq_primers2

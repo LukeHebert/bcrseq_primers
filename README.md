@@ -15,7 +15,9 @@ These papers focused on human BCR genes. For myriad reasons including the applic
 ## Contents
 - `generate_primers.py`: This script takes a FASTA file of target sequences (e.g. heavy chain V gene framework 1 sequences) and a handful of user provided parameters such as range of allowable primer length, number of allowable degenerate nucleotide positions, etc. It outputs suggested primers and their corresponding target sequences.
 
-- Any directories such as `IGHV`, `IGKC`, etc. include both the necessary input files for designing ferret primers (e.g. `ighv_fwr1.fasta`, `igkc_coding.fasta`) as well as the output from `generate_primers.py`
+- Any directories such as `IGHV`, `IGKC`, etc. include both the necessary input files for designing ferret primers (e.g. `IGHV_fwr1.fasta`, `IGKC_coding.fasta`) as well as the output from `generate_primers.py`
+
+- `environment.yml`: Conda environment i.e. dependencies file for ease of setup
 
 ## Helpful resources
 
