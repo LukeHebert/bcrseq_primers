@@ -1,0 +1,9 @@
+Run parameters:
+Input file: all_Cs/nonredundant_c_seqs.fasta
+Number of bases considered (num_bases): 45
+Minimum match length (min_match): 15
+
+
+Summary:
+Total theoretical window comparisons: 20181
+Total problematic subsequences found: 0

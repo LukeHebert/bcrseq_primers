@@ -13,9 +13,15 @@ These papers focused on human BCR genes. For myriad reasons including the applic
 
 
 ## Contents
-- `generate_primers.py`: This script takes a FASTA file of target sequences (e.g. heavy chain V gene framework 1 sequences) and a handful of user provided parameters such as range of allowable primer length, number of allowable degenerate nucleotide positions, etc. It outputs suggested primers and their corresponding target sequences.
+- `generate_primers.py`: This script takes a FASTA file of some target V gene sequences (e.g. heavy chain V gene framework 1 sequences) and a handful of user provided parameters such as range of allowable primer length, number of allowable degenerate nucleotide positions, etc. It outputs suggested primers and their corresponding target sequences.
 
-- Any directories such as `IGHV`, `IGKC`, etc. include both the necessary input files for designing ferret primers (e.g. `ighv_fam1.fasta`, `IGKC_coding.fasta`) as well as the output from `generate_primers.py`
+- `bad_c_areas.py`: This script takes a FASTA file of all target C gene sequences and searches for areas to avoid priming due to perfect shared homology between two or more C genes.
+
+- Four-letter directories such as `IGHV` include both the necessary input files for designing ferret primers (e.g. `ighv_fam1.fasta`) as well as the output from `generate_primers.py`
+
+- `all_Cs`: Includes the relevant input ferret C gene sequences tested for undesirable priming areas using `bad_c_areas.py` as well as the output and resulting manually chosen C gene primer sequence choies.
+
+- `revcomp.py`: Small script that simply takes an input FASTA and creates a new FASTA with reverse compliment versions of the input's sequences. Can be helpful when manually designing C gene primers.
 
 - `environment.yml`: Conda environment i.e. dependencies file for ease of setup
 
