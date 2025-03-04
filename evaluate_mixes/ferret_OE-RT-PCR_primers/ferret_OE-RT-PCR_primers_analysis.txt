@@ -1,0 +1,1615 @@
+User Arguments:
+  fasta: ferret_OE-RT-PCR_primers.fasta
+
+Summary:
+Total primers: 39
+Primers with no GC clamp: 0
+Primers with melting temp outside 65-75°C: 5
+Primers with (3-mer) self-homology: 39
+Primers with interprimer homology: 0
+Primers with one or more (4-mer or compound 4-mer) repeats: 11
+
+Primer ID: F_HV.I_fwd_OE
+Original Sequence: TATTCCCATCGCGGCGCCAGGTCCATCTGTTACAGTCTGG
+IUPAC-resolved Sequence: TATTCCCATCGCGGCGCCAGGTCCATCTGTTACAGTCTGG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 68.48 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'CCA' found at positions 6 and 38
+    Triplet 'CGC' found at positions 10 and 11
+    Triplet 'CGC' found at positions 10 and 14
+    Triplet 'GCG' found at positions 11 and 10
+    Triplet 'GCG' found at positions 11 and 15
+    Triplet 'GGC' found at positions 13 and 16
+    Triplet 'GCG' found at positions 14 and 10
+    Triplet 'GCG' found at positions 14 and 15
+    Triplet 'CGC' found at positions 15 and 11
+    Triplet 'CGC' found at positions 15 and 14
+    Triplet 'GCC' found at positions 16 and 13
+    Triplet 'CCA' found at positions 17 and 38
+    Triplet 'CAG' found at positions 18 and 27
+    Triplet 'CAG' found at positions 18 and 37
+    Triplet 'CCA' found at positions 23 and 38
+    Triplet 'CTG' found at positions 27 and 18
+    Triplet 'CTG' found at positions 27 and 33
+    Triplet 'TGT' found at positions 28 and 32
+    Triplet 'ACA' found at positions 32 and 28
+    Triplet 'CAG' found at positions 33 and 27
+    Triplet 'CAG' found at positions 33 and 37
+    Triplet 'CTG' found at positions 37 and 18
+    Triplet 'CTG' found at positions 37 and 33
+    Triplet 'TGG' found at positions 38 and 6
+    Triplet 'TGG' found at positions 38 and 17
+    Triplet 'TGG' found at positions 38 and 23
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_HV.III.1_fwd_OE
+Original Sequence: TATTCCCATCGCGGCGCGRTGCAGYTGGTGGARTCTGGGG
+IUPAC-resolved Sequence: TATTCCCATCGCGGCGCGATGCAGTTGGTGGAATCTGGGG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 69.50 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'ATT' found at positions 2 and 32
+    Triplet 'TTC' found at positions 3 and 31
+    Triplet 'TCC' found at positions 4 and 30
+    Triplet 'CCC' found at positions 5 and 37
+    Triplet 'CCC' found at positions 5 and 38
+    Triplet 'CCA' found at positions 6 and 26
+    Triplet 'CCA' found at positions 6 and 29
+    Triplet 'CCA' found at positions 6 and 36
+    Triplet 'CAT' found at positions 7 and 19
+    Triplet 'ATC' found at positions 8 and 18
+    Triplet 'TCG' found at positions 9 and 17
+    Triplet 'CGC' found at positions 10 and 11
+    Triplet 'CGC' found at positions 10 and 14
+    Triplet 'CGC' found at positions 10 and 16
+    Triplet 'GCG' found at positions 11 and 10
+    Triplet 'GCG' found at positions 11 and 15
+    Triplet 'GCG' found at positions 14 and 10
+    Triplet 'GCG' found at positions 14 and 15
+    Triplet 'CGC' found at positions 15 and 11
+    Triplet 'CGC' found at positions 15 and 14
+    Triplet 'CGC' found at positions 15 and 16
+    Triplet 'GCG' found at positions 16 and 10
+    Triplet 'GCG' found at positions 16 and 15
+    Triplet 'CGA' found at positions 17 and 9
+    Triplet 'GAT' found at positions 18 and 8
+    Triplet 'GAT' found at positions 18 and 33
+    Triplet 'ATG' found at positions 19 and 7
+    Triplet 'TGC' found at positions 20 and 21
+    Triplet 'GCA' found at positions 21 and 20
+    Triplet 'CAG' found at positions 22 and 35
+    Triplet 'TGG' found at positions 26 and 6
+    Triplet 'TGG' found at positions 29 and 6
+    Triplet 'GGA' found at positions 30 and 4
+    Triplet 'GAA' found at positions 31 and 3
+    Triplet 'AAT' found at positions 32 and 2
+    Triplet 'ATC' found at positions 33 and 18
+    Triplet 'CTG' found at positions 35 and 22
+    Triplet 'TGG' found at positions 36 and 6
+    Triplet 'GGG' found at positions 37 and 5
+    Triplet 'GGG' found at positions 38 and 5
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 37 to 40
+
+Primer ID: F_HV.III.2_fwd_OE
+Original Sequence: TATTCCCATCGCGGCGCGAGGTGSAGCTGGTGGAGRCTGG
+IUPAC-resolved Sequence: TATTCCCATCGCGGCGCGAGGTGGAGCTGGTGGAGACTGG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 71.55 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'TCC' found at positions 4 and 23
+    Triplet 'TCC' found at positions 4 and 32
+    Triplet 'CCA' found at positions 6 and 22
+    Triplet 'CCA' found at positions 6 and 28
+    Triplet 'CCA' found at positions 6 and 31
+    Triplet 'CCA' found at positions 6 and 38
+    Triplet 'TCG' found at positions 9 and 17
+    Triplet 'CGC' found at positions 10 and 11
+    Triplet 'CGC' found at positions 10 and 14
+    Triplet 'CGC' found at positions 10 and 16
+    Triplet 'GCG' found at positions 11 and 10
+    Triplet 'GCG' found at positions 11 and 15
+    Triplet 'GCG' found at positions 14 and 10
+    Triplet 'GCG' found at positions 14 and 15
+    Triplet 'CGC' found at positions 15 and 11
+    Triplet 'CGC' found at positions 15 and 14
+    Triplet 'CGC' found at positions 15 and 16
+    Triplet 'GCG' found at positions 16 and 10
+    Triplet 'GCG' found at positions 16 and 15
+    Triplet 'CGA' found at positions 17 and 9
+    Triplet 'TGG' found at positions 22 and 6
+    Triplet 'GGA' found at positions 23 and 4
+    Triplet 'AGC' found at positions 25 and 26
+    Triplet 'GCT' found at positions 26 and 25
+    Triplet 'TGG' found at positions 28 and 6
+    Triplet 'TGG' found at positions 31 and 6
+    Triplet 'GGA' found at positions 32 and 4
+    Triplet 'TGG' found at positions 38 and 6
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_HV.III.3_fwd_OE
+Original Sequence: TATTCCCATCGCGGCGCGAKGTGMAGCTKGTGGAATCTGG
+IUPAC-resolved Sequence: TATTCCCATCGCGGCGCGAGGTGAAGCTGGTGGAATCTGG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 69.50 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'ATT' found at positions 2 and 34
+    Triplet 'TTC' found at positions 3 and 23
+    Triplet 'TTC' found at positions 3 and 33
+    Triplet 'TCC' found at positions 4 and 32
+    Triplet 'CCA' found at positions 6 and 28
+    Triplet 'CCA' found at positions 6 and 31
+    Triplet 'CCA' found at positions 6 and 38
+    Triplet 'TCG' found at positions 9 and 17
+    Triplet 'CGC' found at positions 10 and 11
+    Triplet 'CGC' found at positions 10 and 14
+    Triplet 'CGC' found at positions 10 and 16
+    Triplet 'GCG' found at positions 11 and 10
+    Triplet 'GCG' found at positions 11 and 15
+    Triplet 'GCG' found at positions 14 and 10
+    Triplet 'GCG' found at positions 14 and 15
+    Triplet 'CGC' found at positions 15 and 11
+    Triplet 'CGC' found at positions 15 and 14
+    Triplet 'CGC' found at positions 15 and 16
+    Triplet 'GCG' found at positions 16 and 10
+    Triplet 'GCG' found at positions 16 and 15
+    Triplet 'CGA' found at positions 17 and 9
+    Triplet 'GAA' found at positions 23 and 3
+    Triplet 'AGC' found at positions 25 and 26
+    Triplet 'GCT' found at positions 26 and 25
+    Triplet 'TGG' found at positions 28 and 6
+    Triplet 'TGG' found at positions 31 and 6
+    Triplet 'GGA' found at positions 32 and 4
+    Triplet 'GAA' found at positions 33 and 3
+    Triplet 'AAT' found at positions 34 and 2
+    Triplet 'TGG' found at positions 38 and 6
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_HV.III.4_fwd_OE
+Original Sequence: TATTCCCATCGCGGCGCGGTGCAGCTGGTGGAGTCTGGGG
+IUPAC-resolved Sequence: TATTCCCATCGCGGCGCGGTGCAGCTGGTGGAGTCTGGGG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 72.58 °C
+Primers with Tm within ±5°C: 35 / 39 (89.74%)
+Self-homology (3-base complementary matches):
+    Triplet 'TCC' found at positions 4 and 30
+    Triplet 'CCC' found at positions 5 and 37
+    Triplet 'CCC' found at positions 5 and 38
+    Triplet 'CCA' found at positions 6 and 26
+    Triplet 'CCA' found at positions 6 and 29
+    Triplet 'CCA' found at positions 6 and 36
+    Triplet 'CGC' found at positions 10 and 11
+    Triplet 'CGC' found at positions 10 and 14
+    Triplet 'CGC' found at positions 10 and 16
+    Triplet 'GCG' found at positions 11 and 10
+    Triplet 'GCG' found at positions 11 and 15
+    Triplet 'GCG' found at positions 14 and 10
+    Triplet 'GCG' found at positions 14 and 15
+    Triplet 'CGC' found at positions 15 and 11
+    Triplet 'CGC' found at positions 15 and 14
+    Triplet 'CGC' found at positions 15 and 16
+    Triplet 'GCG' found at positions 16 and 10
+    Triplet 'GCG' found at positions 16 and 15
+    Triplet 'TGC' found at positions 20 and 21
+    Triplet 'GCA' found at positions 21 and 20
+    Triplet 'CAG' found at positions 22 and 25
+    Triplet 'CAG' found at positions 22 and 35
+    Triplet 'AGC' found at positions 23 and 24
+    Triplet 'GCT' found at positions 24 and 23
+    Triplet 'CTG' found at positions 25 and 22
+    Triplet 'TGG' found at positions 26 and 6
+    Triplet 'TGG' found at positions 29 and 6
+    Triplet 'GGA' found at positions 30 and 4
+    Triplet 'CTG' found at positions 35 and 22
+    Triplet 'TGG' found at positions 36 and 6
+    Triplet 'GGG' found at positions 37 and 5
+    Triplet 'GGG' found at positions 38 and 5
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 37 to 40
+
+Primer ID: F_HV.IV_fwd_OE
+Original Sequence: TATTCCCATCGCGGCGCCAACTTACACTTCAGGAGTCAGG
+IUPAC-resolved Sequence: TATTCCCATCGCGGCGCCAACTTACACTTCAGGAGTCAGG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 67.45 °C
+Primers with Tm within ±5°C: 28 / 39 (71.79%)
+Self-homology (3-base complementary matches):
+    Triplet 'TCC' found at positions 4 and 32
+    Triplet 'CGC' found at positions 10 and 11
+    Triplet 'CGC' found at positions 10 and 14
+    Triplet 'GCG' found at positions 11 and 10
+    Triplet 'GCG' found at positions 11 and 15
+    Triplet 'GGC' found at positions 13 and 16
+    Triplet 'GCG' found at positions 14 and 10
+    Triplet 'GCG' found at positions 14 and 15
+    Triplet 'CGC' found at positions 15 and 11
+    Triplet 'CGC' found at positions 15 and 14
+    Triplet 'GCC' found at positions 16 and 13
+    Triplet 'ACT' found at positions 20 and 34
+    Triplet 'ACT' found at positions 26 and 34
+    Triplet 'GGA' found at positions 32 and 4
+    Triplet 'AGT' found at positions 34 and 20
+    Triplet 'AGT' found at positions 34 and 26
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_HV.VII_fwd_OE
+Original Sequence: TATTCCCATCGCGGCGCCAGGTGCAGYTGGTGCARTCWGA
+IUPAC-resolved Sequence: TATTCCCATCGCGGCGCCAGGTGCAGTTGGTGCAATCAGA
+GC Clamp: Sufficient
+Melting Temperature (Tm): 68.48 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'ATT' found at positions 2 and 34
+    Triplet 'CCA' found at positions 6 and 28
+    Triplet 'CGC' found at positions 10 and 11
+    Triplet 'CGC' found at positions 10 and 14
+    Triplet 'GCG' found at positions 11 and 10
+    Triplet 'GCG' found at positions 11 and 15
+    Triplet 'GGC' found at positions 13 and 16
+    Triplet 'GCG' found at positions 14 and 10
+    Triplet 'GCG' found at positions 14 and 15
+    Triplet 'CGC' found at positions 15 and 11
+    Triplet 'CGC' found at positions 15 and 14
+    Triplet 'GCC' found at positions 16 and 13
+    Triplet 'CCA' found at positions 17 and 28
+    Triplet 'TGC' found at positions 22 and 23
+    Triplet 'TGC' found at positions 22 and 32
+    Triplet 'GCA' found at positions 23 and 22
+    Triplet 'GCA' found at positions 23 and 31
+    Triplet 'TTG' found at positions 27 and 33
+    Triplet 'TGG' found at positions 28 and 6
+    Triplet 'TGG' found at positions 28 and 17
+    Triplet 'TGC' found at positions 31 and 23
+    Triplet 'TGC' found at positions 31 and 32
+    Triplet 'GCA' found at positions 32 and 22
+    Triplet 'GCA' found at positions 32 and 31
+    Triplet 'CAA' found at positions 33 and 27
+    Triplet 'AAT' found at positions 34 and 2
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_KV.1_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGADRTHGTGMTGACACAGAC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGAAATAGTGATGACACAGAC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 68.63 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'CTA' found at positions 19 and 29
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'TAG' found at positions 29 and 19
+    Triplet 'GTG' found at positions 31 and 38
+    Triplet 'CAC' found at positions 38 and 31
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_KV.2_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGAHRTCACRATGACTCAGTCTCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGAAATCACAATGACTCAGTCTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 69.82 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'GAT' found at positions 8 and 28
+    Triplet 'GGA' found at positions 12 and 45
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'ATC' found at positions 28 and 8
+    Triplet 'TCA' found at positions 29 and 35
+    Triplet 'TGA' found at positions 35 and 29
+    Triplet 'TGA' found at positions 35 and 39
+    Triplet 'GAC' found at positions 36 and 42
+    Triplet 'ACT' found at positions 37 and 41
+    Triplet 'TCA' found at positions 39 and 35
+    Triplet 'AGT' found at positions 41 and 37
+    Triplet 'GTC' found at positions 42 and 36
+    Triplet 'TCC' found at positions 45 and 12
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_KV.3_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCACAYNGDGMTGACCCAGTCTCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCACATAGAGATGACCCAGTCTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 70.92 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'ATG' found at positions 9 and 26
+    Triplet 'TGG' found at positions 10 and 23
+    Triplet 'TGG' found at positions 10 and 38
+    Triplet 'GGG' found at positions 11 and 37
+    Triplet 'GGA' found at positions 12 and 44
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'CTA' found at positions 19 and 28
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'CCA' found at positions 23 and 10
+    Triplet 'CAT' found at positions 26 and 9
+    Triplet 'CAT' found at positions 26 and 33
+    Triplet 'TAG' found at positions 28 and 19
+    Triplet 'AGA' found at positions 29 and 42
+    Triplet 'GAG' found at positions 30 and 43
+    Triplet 'AGA' found at positions 31 and 42
+    Triplet 'ATG' found at positions 33 and 26
+    Triplet 'GAC' found at positions 35 and 41
+    Triplet 'CCC' found at positions 37 and 11
+    Triplet 'CCA' found at positions 38 and 10
+    Triplet 'GTC' found at positions 41 and 35
+    Triplet 'TCT' found at positions 42 and 29
+    Triplet 'TCT' found at positions 42 and 31
+    Triplet 'CTC' found at positions 43 and 30
+    Triplet 'TCC' found at positions 44 and 12
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_KV.4_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCAGGTYGTRCTRACTCARACCCCA
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCAGGTTGTACTAACTCAAACCCCA
+GC Clamp: Sufficient
+Melting Temperature (Tm): 69.82 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 23
+    Triplet 'TGG' found at positions 10 and 45
+    Triplet 'GGG' found at positions 11 and 43
+    Triplet 'GGG' found at positions 11 and 44
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'TAG' found at positions 16 and 33
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'TAG' found at positions 20 and 33
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'CCA' found at positions 23 and 10
+    Triplet 'GGT' found at positions 26 and 42
+    Triplet 'GTT' found at positions 27 and 35
+    Triplet 'GTT' found at positions 27 and 41
+    Triplet 'TTG' found at positions 28 and 39
+    Triplet 'GTA' found at positions 30 and 31
+    Triplet 'TAC' found at positions 31 and 30
+    Triplet 'CTA' found at positions 33 and 16
+    Triplet 'CTA' found at positions 33 and 20
+    Triplet 'AAC' found at positions 35 and 27
+    Triplet 'CAA' found at positions 39 and 28
+    Triplet 'AAC' found at positions 41 and 27
+    Triplet 'ACC' found at positions 42 and 26
+    Triplet 'CCC' found at positions 43 and 11
+    Triplet 'CCC' found at positions 44 and 11
+    Triplet 'CCA' found at positions 45 and 10
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'CCCC' from position 43 to 46
+
+Primer ID: F_KV.5_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGAARTTGTATTGACACAGAMCCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGAAATTGTATTGACACAGAACCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 68.95 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'GGG' found at positions 11 and 45
+    Triplet 'AAT' found at positions 14 and 28
+    Triplet 'AAT' found at positions 14 and 33
+    Triplet 'ATA' found at positions 15 and 32
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AAT' found at positions 27 and 28
+    Triplet 'AAT' found at positions 27 and 33
+    Triplet 'ATT' found at positions 28 and 14
+    Triplet 'ATT' found at positions 28 and 27
+    Triplet 'TGT' found at positions 30 and 37
+    Triplet 'TGT' found at positions 30 and 39
+    Triplet 'TAT' found at positions 32 and 15
+    Triplet 'ATT' found at positions 33 and 14
+    Triplet 'ATT' found at positions 33 and 27
+    Triplet 'ACA' found at positions 37 and 30
+    Triplet 'ACA' found at positions 39 and 30
+    Triplet 'CCC' found at positions 45 and 11
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_KV.6_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGAWATCATGMTGACACAGACCCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGAAATCATGATGACACAGACCCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 70.69 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'GAT' found at positions 8 and 28
+    Triplet 'ATG' found at positions 9 and 30
+    Triplet 'GGG' found at positions 11 and 44
+    Triplet 'GGG' found at positions 11 and 45
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'ATC' found at positions 28 and 8
+    Triplet 'ATC' found at positions 28 and 33
+    Triplet 'TCA' found at positions 29 and 32
+    Triplet 'TCA' found at positions 29 and 35
+    Triplet 'CAT' found at positions 30 and 9
+    Triplet 'CAT' found at positions 30 and 31
+    Triplet 'CAT' found at positions 30 and 34
+    Triplet 'ATG' found at positions 31 and 30
+    Triplet 'TGA' found at positions 32 and 29
+    Triplet 'GAT' found at positions 33 and 28
+    Triplet 'ATG' found at positions 34 and 30
+    Triplet 'TGA' found at positions 35 and 29
+    Triplet 'CCC' found at positions 44 and 11
+    Triplet 'CCC' found at positions 45 and 11
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'CCCC' from position 44 to 47
+
+Primer ID: F_KV.7_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGAGGYYGTGMTKACACAGACC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGAGGTTGTGATGACACAGACC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 71.17 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'GGT' found at positions 27 and 43
+    Triplet 'TGT' found at positions 30 and 37
+    Triplet 'TGT' found at positions 30 and 39
+    Triplet 'GTG' found at positions 31 and 38
+    Triplet 'ACA' found at positions 37 and 30
+    Triplet 'CAC' found at positions 38 and 31
+    Triplet 'ACA' found at positions 39 and 30
+    Triplet 'ACC' found at positions 43 and 27
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_KV.8_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGAAATCGTGTTGACGCAGTCTCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGAAATCGTGTTGACGCAGTCTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 71.56 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'GCG' found at positions 1 and 38
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'GCG' found at positions 6 and 38
+    Triplet 'CGA' found at positions 7 and 29
+    Triplet 'GAT' found at positions 8 and 28
+    Triplet 'GGA' found at positions 12 and 45
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'CGA' found at positions 24 and 29
+    Triplet 'ATC' found at positions 28 and 8
+    Triplet 'TCG' found at positions 29 and 7
+    Triplet 'TCG' found at positions 29 and 24
+    Triplet 'CGT' found at positions 30 and 37
+    Triplet 'GAC' found at positions 36 and 42
+    Triplet 'ACG' found at positions 37 and 30
+    Triplet 'CGC' found at positions 38 and 1
+    Triplet 'CGC' found at positions 38 and 6
+    Triplet 'GTC' found at positions 42 and 36
+    Triplet 'TCC' found at positions 45 and 12
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_KV.9_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGAGATTGTCCTGACCCAGTCTCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGAGATTGTCCTGACCCAGTCTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 72.43 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 39
+    Triplet 'GGG' found at positions 11 and 38
+    Triplet 'GGA' found at positions 12 and 32
+    Triplet 'GGA' found at positions 12 and 45
+    Triplet 'AAT' found at positions 14 and 28
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'GAG' found at positions 25 and 44
+    Triplet 'AGA' found at positions 26 and 43
+    Triplet 'ATT' found at positions 28 and 14
+    Triplet 'GTC' found at positions 31 and 36
+    Triplet 'TCC' found at positions 32 and 12
+    Triplet 'CTG' found at positions 34 and 40
+    Triplet 'GAC' found at positions 36 and 31
+    Triplet 'GAC' found at positions 36 and 42
+    Triplet 'CCC' found at positions 38 and 11
+    Triplet 'CCA' found at positions 39 and 10
+    Triplet 'CAG' found at positions 40 and 34
+    Triplet 'GTC' found at positions 42 and 36
+    Triplet 'TCT' found at positions 43 and 26
+    Triplet 'CTC' found at positions 44 and 25
+    Triplet 'TCC' found at positions 45 and 12
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_KV.10_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGAAGCTGTGCTGACACAATCCCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGAAGCTGTGCTGACACAATCCCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 72.43 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'GAT' found at positions 8 and 42
+    Triplet 'GGG' found at positions 11 and 44
+    Triplet 'GGG' found at positions 11 and 45
+    Triplet 'GGA' found at positions 12 and 43
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 28
+    Triplet 'AGC' found at positions 17 and 33
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 27
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 28
+    Triplet 'AGC' found at positions 21 and 33
+    Triplet 'AGC' found at positions 27 and 18
+    Triplet 'AGC' found at positions 27 and 28
+    Triplet 'AGC' found at positions 27 and 33
+    Triplet 'GCT' found at positions 28 and 17
+    Triplet 'GCT' found at positions 28 and 21
+    Triplet 'GCT' found at positions 28 and 27
+    Triplet 'TGT' found at positions 30 and 37
+    Triplet 'TGT' found at positions 30 and 39
+    Triplet 'GTG' found at positions 31 and 38
+    Triplet 'GCT' found at positions 33 and 17
+    Triplet 'GCT' found at positions 33 and 21
+    Triplet 'GCT' found at positions 33 and 27
+    Triplet 'ACA' found at positions 37 and 30
+    Triplet 'CAC' found at positions 38 and 31
+    Triplet 'ACA' found at positions 39 and 30
+    Triplet 'ATC' found at positions 42 and 8
+    Triplet 'TCC' found at positions 43 and 12
+    Triplet 'CCC' found at positions 44 and 11
+    Triplet 'CCC' found at positions 45 and 11
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'CCCC' from position 44 to 47
+
+Primer ID: F_KV.11_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCCACGTGGGGCTGACCCAGTCTCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCCACGTGGGGCTGACCCAGTCTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 75.05 °C
+Primers with Tm within ±5°C: 23 / 39 (58.97%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'GCC' found at positions 3 and 32
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 24
+    Triplet 'TGG' found at positions 10 and 39
+    Triplet 'GGG' found at positions 11 and 23
+    Triplet 'GGG' found at positions 11 and 38
+    Triplet 'GGA' found at positions 12 and 45
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 33
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 33
+    Triplet 'GCC' found at positions 22 and 32
+    Triplet 'CCC' found at positions 23 and 11
+    Triplet 'CCC' found at positions 23 and 30
+    Triplet 'CCC' found at positions 23 and 31
+    Triplet 'CCA' found at positions 24 and 10
+    Triplet 'CCA' found at positions 24 and 29
+    Triplet 'CAC' found at positions 25 and 28
+    Triplet 'ACG' found at positions 26 and 27
+    Triplet 'CGT' found at positions 27 and 26
+    Triplet 'GTG' found at positions 28 and 25
+    Triplet 'TGG' found at positions 29 and 24
+    Triplet 'TGG' found at positions 29 and 39
+    Triplet 'GGG' found at positions 30 and 23
+    Triplet 'GGG' found at positions 30 and 38
+    Triplet 'GGG' found at positions 31 and 23
+    Triplet 'GGG' found at positions 31 and 38
+    Triplet 'GGC' found at positions 32 and 3
+    Triplet 'GGC' found at positions 32 and 22
+    Triplet 'GCT' found at positions 33 and 17
+    Triplet 'GCT' found at positions 33 and 21
+    Triplet 'CTG' found at positions 34 and 40
+    Triplet 'GAC' found at positions 36 and 42
+    Triplet 'CCC' found at positions 38 and 11
+    Triplet 'CCC' found at positions 38 and 30
+    Triplet 'CCC' found at positions 38 and 31
+    Triplet 'CCA' found at positions 39 and 10
+    Triplet 'CCA' found at positions 39 and 29
+    Triplet 'CAG' found at positions 40 and 34
+    Triplet 'GTC' found at positions 42 and 36
+    Triplet 'TCC' found at positions 45 and 12
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 30 to 33
+
+Primer ID: F_LV.1_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCTCCAGTGDRBTGACTCAGHC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCTCCAGTGAACTGACTCAGAC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 70.49 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 26
+    Triplet 'GGA' found at positions 12 and 25
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'TCC' found at positions 25 and 12
+    Triplet 'CCA' found at positions 26 and 10
+    Triplet 'CAG' found at positions 27 and 34
+    Triplet 'AGT' found at positions 28 and 33
+    Triplet 'AGT' found at positions 28 and 37
+    Triplet 'TGA' found at positions 30 and 39
+    Triplet 'ACT' found at positions 33 and 28
+    Triplet 'CTG' found at positions 34 and 27
+    Triplet 'CTG' found at positions 34 and 40
+    Triplet 'TGA' found at positions 35 and 39
+    Triplet 'ACT' found at positions 37 and 28
+    Triplet 'TCA' found at positions 39 and 30
+    Triplet 'TCA' found at positions 39 and 35
+    Triplet 'CAG' found at positions 40 and 34
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.2_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCTCVTRTGTGCTGACWCARCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCTCATATGTGCTGACACAACC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 69.56 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'ATG' found at positions 9 and 26
+    Triplet 'ATA' found at positions 15 and 28
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 33
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 33
+    Triplet 'TCA' found at positions 25 and 35
+    Triplet 'CAT' found at positions 26 and 9
+    Triplet 'CAT' found at positions 26 and 29
+    Triplet 'ATA' found at positions 27 and 28
+    Triplet 'TAT' found at positions 28 and 15
+    Triplet 'TAT' found at positions 28 and 27
+    Triplet 'ATG' found at positions 29 and 26
+    Triplet 'TGT' found at positions 30 and 37
+    Triplet 'TGT' found at positions 30 and 39
+    Triplet 'GTG' found at positions 31 and 38
+    Triplet 'GCT' found at positions 33 and 17
+    Triplet 'GCT' found at positions 33 and 21
+    Triplet 'TGA' found at positions 35 and 25
+    Triplet 'ACA' found at positions 37 and 30
+    Triplet 'CAC' found at positions 38 and 31
+    Triplet 'ACA' found at positions 39 and 30
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.3_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGYCTRTGCTGACYCARCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGTCTATGCTGACTCAACC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 70.49 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 24
+    Triplet 'GGG' found at positions 11 and 23
+    Triplet 'ATA' found at positions 15 and 30
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'TAG' found at positions 16 and 29
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 33
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'TAG' found at positions 20 and 29
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 33
+    Triplet 'CCC' found at positions 23 and 11
+    Triplet 'CCA' found at positions 24 and 10
+    Triplet 'CAG' found at positions 25 and 34
+    Triplet 'AGT' found at positions 26 and 37
+    Triplet 'GTC' found at positions 27 and 36
+    Triplet 'CTA' found at positions 29 and 16
+    Triplet 'CTA' found at positions 29 and 20
+    Triplet 'TAT' found at positions 30 and 15
+    Triplet 'GCT' found at positions 33 and 17
+    Triplet 'GCT' found at positions 33 and 21
+    Triplet 'CTG' found at positions 34 and 25
+    Triplet 'TGA' found at positions 35 and 39
+    Triplet 'GAC' found at positions 36 and 27
+    Triplet 'ACT' found at positions 37 and 26
+    Triplet 'TCA' found at positions 39 and 35
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.4_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGCCTAYGWGCTGACTCAGCCTCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGCCTATGAGCTGACTCAGCCTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 73.31 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'GCG' found at positions 1 and 24
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'GCG' found at positions 6 and 24
+    Triplet 'GGA' found at positions 12 and 45
+    Triplet 'ATA' found at positions 15 and 28
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'TAG' found at positions 16 and 27
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 33
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 32
+    Triplet 'GCT' found at positions 18 and 41
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'TAG' found at positions 20 and 27
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 33
+    Triplet 'CGC' found at positions 24 and 1
+    Triplet 'CGC' found at positions 24 and 6
+    Triplet 'CTA' found at positions 27 and 16
+    Triplet 'CTA' found at positions 27 and 20
+    Triplet 'TAT' found at positions 28 and 15
+    Triplet 'TGA' found at positions 30 and 39
+    Triplet 'GAG' found at positions 31 and 38
+    Triplet 'GAG' found at positions 31 and 44
+    Triplet 'AGC' found at positions 32 and 18
+    Triplet 'AGC' found at positions 32 and 33
+    Triplet 'GCT' found at positions 33 and 17
+    Triplet 'GCT' found at positions 33 and 21
+    Triplet 'GCT' found at positions 33 and 32
+    Triplet 'GCT' found at positions 33 and 41
+    Triplet 'CTG' found at positions 34 and 40
+    Triplet 'TGA' found at positions 35 and 39
+    Triplet 'CTC' found at positions 38 and 31
+    Triplet 'TCA' found at positions 39 and 30
+    Triplet 'TCA' found at positions 39 and 35
+    Triplet 'CAG' found at positions 40 and 34
+    Triplet 'AGC' found at positions 41 and 18
+    Triplet 'AGC' found at positions 41 and 33
+    Triplet 'CTC' found at positions 44 and 31
+    Triplet 'TCC' found at positions 45 and 12
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.5_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCAGRCKGTGGTGAYYCAGGAGCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCAGACGGTGGTGATTCAGGAGCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 72.71 °C
+Primers with Tm within ±5°C: 35 / 39 (89.74%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CCG' found at positions 4 and 28
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 23
+    Triplet 'GAA' found at positions 13 and 37
+    Triplet 'AAT' found at positions 14 and 36
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 43
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'CCA' found at positions 23 and 10
+    Triplet 'CCA' found at positions 23 and 31
+    Triplet 'CGG' found at positions 28 and 4
+    Triplet 'TGG' found at positions 31 and 23
+    Triplet 'TGA' found at positions 34 and 38
+    Triplet 'ATT' found at positions 36 and 14
+    Triplet 'TTC' found at positions 37 and 13
+    Triplet 'TCA' found at positions 38 and 34
+    Triplet 'AGC' found at positions 43 and 18
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.6_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCCCAGTGARCTGACWCAGCYKCCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCCCAGTGAACTGACACAGCTGCCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 73.31 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 25
+    Triplet 'GGG' found at positions 11 and 23
+    Triplet 'GGG' found at positions 11 and 24
+    Triplet 'GGG' found at positions 11 and 45
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 41
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 40
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 41
+    Triplet 'CCC' found at positions 23 and 11
+    Triplet 'CCC' found at positions 24 and 11
+    Triplet 'CCA' found at positions 25 and 10
+    Triplet 'CAG' found at positions 26 and 33
+    Triplet 'CAG' found at positions 26 and 42
+    Triplet 'AGT' found at positions 27 and 32
+    Triplet 'GTG' found at positions 28 and 37
+    Triplet 'ACT' found at positions 32 and 27
+    Triplet 'CTG' found at positions 33 and 26
+    Triplet 'CTG' found at positions 33 and 39
+    Triplet 'CAC' found at positions 37 and 28
+    Triplet 'CAG' found at positions 39 and 33
+    Triplet 'CAG' found at positions 39 and 42
+    Triplet 'AGC' found at positions 40 and 18
+    Triplet 'AGC' found at positions 40 and 41
+    Triplet 'GCT' found at positions 41 and 17
+    Triplet 'GCT' found at positions 41 and 21
+    Triplet 'GCT' found at positions 41 and 40
+    Triplet 'CTG' found at positions 42 and 26
+    Triplet 'CTG' found at positions 42 and 39
+    Triplet 'CCC' found at positions 45 and 11
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'CCCC' from position 23 to 26
+
+Primer ID: F_LV.7_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCAGCCTGTGCTGACCCAGCCACCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCAGCCTGTGCTGACCCAGCCACCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 75.05 °C
+Primers with Tm within ±5°C: 23 / 39 (58.97%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 23
+    Triplet 'TGG' found at positions 10 and 38
+    Triplet 'TGG' found at positions 10 and 42
+    Triplet 'GGG' found at positions 11 and 37
+    Triplet 'GGG' found at positions 11 and 45
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 32
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 25
+    Triplet 'GCT' found at positions 18 and 40
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 32
+    Triplet 'CCA' found at positions 23 and 10
+    Triplet 'CAG' found at positions 24 and 28
+    Triplet 'CAG' found at positions 24 and 33
+    Triplet 'AGC' found at positions 25 and 18
+    Triplet 'AGC' found at positions 25 and 32
+    Triplet 'CTG' found at positions 28 and 24
+    Triplet 'CTG' found at positions 28 and 39
+    Triplet 'GTG' found at positions 30 and 43
+    Triplet 'GCT' found at positions 32 and 17
+    Triplet 'GCT' found at positions 32 and 21
+    Triplet 'GCT' found at positions 32 and 25
+    Triplet 'GCT' found at positions 32 and 40
+    Triplet 'CTG' found at positions 33 and 24
+    Triplet 'CTG' found at positions 33 and 39
+    Triplet 'CCC' found at positions 37 and 11
+    Triplet 'CCA' found at positions 38 and 10
+    Triplet 'CAG' found at positions 39 and 28
+    Triplet 'CAG' found at positions 39 and 33
+    Triplet 'AGC' found at positions 40 and 18
+    Triplet 'AGC' found at positions 40 and 32
+    Triplet 'CCA' found at positions 42 and 10
+    Triplet 'CAC' found at positions 43 and 30
+    Triplet 'CCC' found at positions 45 and 11
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.8_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGTGCTGACTCAGCCTCCCTATGT
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGTGCTGACTCAGCCTCCCTATGT
+GC Clamp: Sufficient
+Melting Temperature (Tm): 72.43 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'GGG' found at positions 11 and 40
+    Triplet 'GGA' found at positions 12 and 39
+    Triplet 'ATA' found at positions 15 and 43
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'TAG' found at positions 16 and 42
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 27
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 35
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'TAG' found at positions 20 and 42
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 27
+    Triplet 'GCT' found at positions 27 and 17
+    Triplet 'GCT' found at positions 27 and 21
+    Triplet 'GCT' found at positions 27 and 35
+    Triplet 'CTG' found at positions 28 and 34
+    Triplet 'TGA' found at positions 29 and 33
+    Triplet 'TCA' found at positions 33 and 29
+    Triplet 'CAG' found at positions 34 and 28
+    Triplet 'AGC' found at positions 35 and 18
+    Triplet 'AGC' found at positions 35 and 27
+    Triplet 'TCC' found at positions 39 and 12
+    Triplet 'CCC' found at positions 40 and 11
+    Triplet 'CTA' found at positions 42 and 16
+    Triplet 'CTA' found at positions 42 and 20
+    Triplet 'TAT' found at positions 43 and 15
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.9_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGTGTGTTGACTCAGCCTCATT
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGTGTGTTGACTCAGCCTCATT
+GC Clamp: Sufficient
+Melting Temperature (Tm): 70.69 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'ATG' found at positions 9 and 44
+    Triplet 'TGG' found at positions 10 and 24
+    Triplet 'GGG' found at positions 11 and 23
+    Triplet 'AAT' found at positions 14 and 45
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 39
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'CCC' found at positions 23 and 11
+    Triplet 'CCA' found at positions 24 and 10
+    Triplet 'AGT' found at positions 26 and 35
+    Triplet 'TGA' found at positions 33 and 37
+    Triplet 'TGA' found at positions 33 and 43
+    Triplet 'ACT' found at positions 35 and 26
+    Triplet 'TCA' found at positions 37 and 33
+    Triplet 'AGC' found at positions 39 and 18
+    Triplet 'TCA' found at positions 43 and 33
+    Triplet 'CAT' found at positions 44 and 9
+    Triplet 'ATT' found at positions 45 and 14
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.10_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCTCCAGTGCTCTGGTTCAGCCTCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCTCCAGTGCTCTGGTTCAGCCTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 73.31 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 26
+    Triplet 'GGA' found at positions 12 and 25
+    Triplet 'GGA' found at positions 12 and 45
+    Triplet 'GAA' found at positions 13 and 38
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 31
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 41
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 31
+    Triplet 'TCC' found at positions 25 and 12
+    Triplet 'CCA' found at positions 26 and 10
+    Triplet 'CCA' found at positions 26 and 35
+    Triplet 'CAG' found at positions 27 and 34
+    Triplet 'GCT' found at positions 31 and 17
+    Triplet 'GCT' found at positions 31 and 21
+    Triplet 'GCT' found at positions 31 and 41
+    Triplet 'CTG' found at positions 34 and 27
+    Triplet 'CTG' found at positions 34 and 40
+    Triplet 'TGG' found at positions 35 and 26
+    Triplet 'TTC' found at positions 38 and 13
+    Triplet 'CAG' found at positions 40 and 34
+    Triplet 'AGC' found at positions 41 and 18
+    Triplet 'AGC' found at positions 41 and 31
+    Triplet 'TCC' found at positions 45 and 12
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.11_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGCCAGTGCTGACTCAGCCACC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGCCAGTGCTGACTCAGCCACC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 74.18 °C
+Primers with Tm within ±5°C: 30 / 39 (76.92%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 24
+    Triplet 'TGG' found at positions 10 and 28
+    Triplet 'TGG' found at positions 10 and 43
+    Triplet 'GGG' found at positions 11 and 23
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 33
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 26
+    Triplet 'GCT' found at positions 18 and 41
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 33
+    Triplet 'CCC' found at positions 23 and 11
+    Triplet 'CCA' found at positions 24 and 10
+    Triplet 'CAG' found at positions 25 and 34
+    Triplet 'AGC' found at positions 26 and 18
+    Triplet 'AGC' found at positions 26 and 33
+    Triplet 'CCA' found at positions 28 and 10
+    Triplet 'CAG' found at positions 29 and 34
+    Triplet 'AGT' found at positions 30 and 37
+    Triplet 'GTG' found at positions 31 and 44
+    Triplet 'GCT' found at positions 33 and 17
+    Triplet 'GCT' found at positions 33 and 21
+    Triplet 'GCT' found at positions 33 and 26
+    Triplet 'GCT' found at positions 33 and 41
+    Triplet 'CTG' found at positions 34 and 25
+    Triplet 'CTG' found at positions 34 and 29
+    Triplet 'CTG' found at positions 34 and 40
+    Triplet 'TGA' found at positions 35 and 39
+    Triplet 'ACT' found at positions 37 and 30
+    Triplet 'TCA' found at positions 39 and 35
+    Triplet 'CAG' found at positions 40 and 34
+    Triplet 'AGC' found at positions 41 and 18
+    Triplet 'AGC' found at positions 41 and 33
+    Triplet 'CCA' found at positions 43 and 10
+    Triplet 'CAC' found at positions 44 and 31
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.12_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGCTTTTGGTGACCCAGCCTCC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGCTTTTGGTGACCCAGCCTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 73.31 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 24
+    Triplet 'TGG' found at positions 10 and 39
+    Triplet 'GGG' found at positions 11 and 23
+    Triplet 'GGG' found at positions 11 and 38
+    Triplet 'GGA' found at positions 12 and 45
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 27
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 26
+    Triplet 'GCT' found at positions 18 and 41
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 27
+    Triplet 'CCC' found at positions 23 and 11
+    Triplet 'CCA' found at positions 24 and 10
+    Triplet 'CCA' found at positions 24 and 32
+    Triplet 'AGC' found at positions 26 and 18
+    Triplet 'AGC' found at positions 26 and 27
+    Triplet 'GCT' found at positions 27 and 17
+    Triplet 'GCT' found at positions 27 and 21
+    Triplet 'GCT' found at positions 27 and 26
+    Triplet 'GCT' found at positions 27 and 41
+    Triplet 'TGG' found at positions 32 and 24
+    Triplet 'TGG' found at positions 32 and 39
+    Triplet 'GGT' found at positions 33 and 37
+    Triplet 'ACC' found at positions 37 and 33
+    Triplet 'CCC' found at positions 38 and 11
+    Triplet 'CCA' found at positions 39 and 10
+    Triplet 'CCA' found at positions 39 and 32
+    Triplet 'AGC' found at positions 41 and 18
+    Triplet 'AGC' found at positions 41 and 27
+    Triplet 'TCC' found at positions 45 and 12
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'TTTT' from position 29 to 32
+
+Primer ID: F_LV.13_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGTCTTCCCTCACACAAGAAGC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCCAGTCTTCCCTCACACAAGAAGC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 71.56 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'TGG' found at positions 10 and 24
+    Triplet 'GGG' found at positions 11 and 23
+    Triplet 'GGG' found at positions 11 and 32
+    Triplet 'GGA' found at positions 12 and 31
+    Triplet 'GAA' found at positions 13 and 30
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 45
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'CCC' found at positions 23 and 11
+    Triplet 'CCA' found at positions 24 and 10
+    Triplet 'TCT' found at positions 28 and 42
+    Triplet 'CTT' found at positions 29 and 41
+    Triplet 'CTT' found at positions 29 and 44
+    Triplet 'TTC' found at positions 30 and 13
+    Triplet 'TTC' found at positions 30 and 43
+    Triplet 'TCC' found at positions 31 and 12
+    Triplet 'CCC' found at positions 32 and 11
+    Triplet 'AAG' found at positions 41 and 29
+    Triplet 'AGA' found at positions 42 and 28
+    Triplet 'GAA' found at positions 43 and 30
+    Triplet 'AAG' found at positions 44 and 29
+    Triplet 'AGC' found at positions 45 and 18
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: F_LV.14_fwd_OE
+Original Sequence: GCGCCGCGATGGGAATAGCTAGCCGCTTATGAGCTGACTCAGGACTC
+IUPAC-resolved Sequence: GCGCCGCGATGGGAATAGCTAGCCGCTTATGAGCTGACTCAGGACTC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 71.56 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'GCG' found at positions 1 and 2
+    Triplet 'GCG' found at positions 1 and 5
+    Triplet 'GCG' found at positions 1 and 24
+    Triplet 'CGC' found at positions 2 and 1
+    Triplet 'CGC' found at positions 2 and 6
+    Triplet 'CGC' found at positions 5 and 1
+    Triplet 'CGC' found at positions 5 and 6
+    Triplet 'GCG' found at positions 6 and 2
+    Triplet 'GCG' found at positions 6 and 5
+    Triplet 'GCG' found at positions 6 and 24
+    Triplet 'ATA' found at positions 15 and 28
+    Triplet 'TAG' found at positions 16 and 19
+    Triplet 'AGC' found at positions 17 and 18
+    Triplet 'AGC' found at positions 17 and 25
+    Triplet 'AGC' found at positions 17 and 33
+    Triplet 'GCT' found at positions 18 and 17
+    Triplet 'GCT' found at positions 18 and 21
+    Triplet 'GCT' found at positions 18 and 32
+    Triplet 'CTA' found at positions 19 and 16
+    Triplet 'CTA' found at positions 19 and 20
+    Triplet 'TAG' found at positions 20 and 19
+    Triplet 'AGC' found at positions 21 and 18
+    Triplet 'AGC' found at positions 21 and 25
+    Triplet 'AGC' found at positions 21 and 33
+    Triplet 'CGC' found at positions 24 and 1
+    Triplet 'CGC' found at positions 24 and 6
+    Triplet 'GCT' found at positions 25 and 17
+    Triplet 'GCT' found at positions 25 and 21
+    Triplet 'GCT' found at positions 25 and 32
+    Triplet 'TAT' found at positions 28 and 15
+    Triplet 'TGA' found at positions 30 and 39
+    Triplet 'GAG' found at positions 31 and 38
+    Triplet 'GAG' found at positions 31 and 45
+    Triplet 'AGC' found at positions 32 and 18
+    Triplet 'AGC' found at positions 32 and 25
+    Triplet 'AGC' found at positions 32 and 33
+    Triplet 'GCT' found at positions 33 and 17
+    Triplet 'GCT' found at positions 33 and 21
+    Triplet 'GCT' found at positions 33 and 32
+    Triplet 'CTG' found at positions 34 and 40
+    Triplet 'TGA' found at positions 35 and 39
+    Triplet 'CTC' found at positions 38 and 31
+    Triplet 'TCA' found at positions 39 and 30
+    Triplet 'TCA' found at positions 39 and 35
+    Triplet 'CAG' found at positions 40 and 34
+    Triplet 'CTC' found at positions 45 and 31
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: common_forward
+Original Sequence: CGCAGTAGCGGTAAACGGC
+IUPAC-resolved Sequence: CGCAGTAGCGGTAAACGGC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 54.22 °C
+Primers with Tm within ±5°C: 2 / 39 (5.13%)
+Self-homology (3-base complementary matches):
+    Triplet 'CGC' found at positions 1 and 8
+    Triplet 'GCG' found at positions 8 and 1
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: common_reverse
+Original Sequence: GCGGATAACAATTTCACACAGG
+IUPAC-resolved Sequence: GCGGATAACAATTTCACACAGG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 51.27 °C
+Primers with Tm within ±5°C: 2 / 39 (5.13%)
+Self-homology (3-base complementary matches):
+    Triplet 'AAT' found at positions 10 and 11
+    Triplet 'ATT' found at positions 11 and 10
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: IgA_OE
+Original Sequence: CGCAGTAGCGGTAAACGGCCAGAGGCTCAGTGGGAAGAC
+IUPAC-resolved Sequence: CGCAGTAGCGGTAAACGGCCAGAGGCTCAGTGGGAAGAC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 69.75 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'CGC' found at positions 1 and 8
+    Triplet 'AGC' found at positions 7 and 25
+    Triplet 'GCG' found at positions 8 and 1
+    Triplet 'GGC' found at positions 17 and 18
+    Triplet 'GCC' found at positions 18 and 17
+    Triplet 'GCC' found at positions 18 and 24
+    Triplet 'CCA' found at positions 19 and 31
+    Triplet 'GAG' found at positions 22 and 26
+    Triplet 'GGC' found at positions 24 and 18
+    Triplet 'GCT' found at positions 25 and 7
+    Triplet 'CTC' found at positions 26 and 22
+    Triplet 'TGG' found at positions 31 and 19
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: IgG_OE
+Original Sequence: CGCAGTAGCGGTAAACGGCCTGGGGGCCAGTGGGAAAAC
+IUPAC-resolved Sequence: CGCAGTAGCGGTAAACGGCCTGGGGGCCAGTGGGAAAAC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 70.80 °C
+Primers with Tm within ±5°C: 36 / 39 (92.31%)
+Self-homology (3-base complementary matches):
+    Triplet 'CGC' found at positions 1 and 8
+    Triplet 'CAG' found at positions 3 and 20
+    Triplet 'GCG' found at positions 8 and 1
+    Triplet 'GGC' found at positions 17 and 18
+    Triplet 'GGC' found at positions 17 and 26
+    Triplet 'GCC' found at positions 18 and 17
+    Triplet 'GCC' found at positions 18 and 25
+    Triplet 'CTG' found at positions 20 and 3
+    Triplet 'CTG' found at positions 20 and 28
+    Triplet 'TGG' found at positions 21 and 27
+    Triplet 'GGC' found at positions 25 and 18
+    Triplet 'GGC' found at positions 25 and 26
+    Triplet 'GCC' found at positions 26 and 17
+    Triplet 'GCC' found at positions 26 and 25
+    Triplet 'CCA' found at positions 27 and 21
+    Triplet 'CCA' found at positions 27 and 31
+    Triplet 'CAG' found at positions 28 and 20
+    Triplet 'TGG' found at positions 31 and 27
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGGG' from position 22 to 26
+    mono-repeat: 'AAAA' from position 35 to 38
+
+Primer ID: IgM_OE
+Original Sequence: CGCAGTAGCGGTAAACGGCCAGGTGATGAGGGGGAAGAG
+IUPAC-resolved Sequence: CGCAGTAGCGGTAAACGGCCAGGTGATGAGGGGGAAGAG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 69.75 °C
+Primers with Tm within ±5°C: 34 / 39 (87.18%)
+Self-homology (3-base complementary matches):
+    Triplet 'CGC' found at positions 1 and 8
+    Triplet 'GCG' found at positions 8 and 1
+    Triplet 'GGC' found at positions 17 and 18
+    Triplet 'GCC' found at positions 18 and 17
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGGG' from position 30 to 34
+
+Primer ID: IgLC_OE
+Original Sequence: GCGGATAACAATTTCACACAGGGGRGGGAAGAGCGTGACCGA
+IUPAC-resolved Sequence: GCGGATAACAATTTCACACAGGGGAGGGAAGAGCGTGACCGA
+GC Clamp: Sufficient
+Melting Temperature (Tm): 68.07 °C
+Primers with Tm within ±5°C: 30 / 39 (76.92%)
+Self-homology (3-base complementary matches):
+    Triplet 'CGG' found at positions 2 and 39
+    Triplet 'AAT' found at positions 10 and 11
+    Triplet 'ATT' found at positions 11 and 10
+    Triplet 'TTC' found at positions 13 and 28
+    Triplet 'TCA' found at positions 14 and 36
+    Triplet 'CAC' found at positions 15 and 35
+    Triplet 'CAC' found at positions 17 and 35
+    Triplet 'GAA' found at positions 28 and 13
+    Triplet 'GTG' found at positions 35 and 15
+    Triplet 'GTG' found at positions 35 and 17
+    Triplet 'TGA' found at positions 36 and 14
+    Triplet 'CCG' found at positions 39 and 2
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 21 to 24
+
+Primer ID: IgKC_OE
+Original Sequence: GCGGATAACAATTTCACACAGGGATGGTTGGAACAGAAAGAC
+IUPAC-resolved Sequence: GCGGATAACAATTTCACACAGGGATGGTTGGAACAGAAAGAC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 64.16 °C
+Primers with Tm within ±5°C: 7 / 39 (17.95%)
+Self-homology (3-base complementary matches):
+    Triplet 'AAC' found at positions 7 and 27
+    Triplet 'CAA' found at positions 9 and 28
+    Triplet 'AAT' found at positions 10 and 11
+    Triplet 'ATT' found at positions 11 and 10
+    Triplet 'TTT' found at positions 12 and 37
+    Triplet 'TTC' found at positions 13 and 31
+    Triplet 'TTC' found at positions 13 and 36
+    Triplet 'GTT' found at positions 27 and 7
+    Triplet 'GTT' found at positions 27 and 32
+    Triplet 'TTG' found at positions 28 and 9
+    Triplet 'GAA' found at positions 31 and 13
+    Triplet 'AAC' found at positions 32 and 27
+    Triplet 'GAA' found at positions 36 and 13
+    Triplet 'AAA' found at positions 37 and 12
+No interprimer homology detected.
+No repeats detected.
+

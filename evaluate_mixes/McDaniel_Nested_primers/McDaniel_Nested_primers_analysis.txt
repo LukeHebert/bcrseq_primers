@@ -1,0 +1,80 @@
+User Arguments:
+  fasta: McDaniel_Nested_primers.fasta
+
+Summary:
+Total primers: 5
+Primers with no GC clamp: 0
+Primers with melting temp outside 65-75°C: 5
+Primers with (3-mer) self-homology: 3
+Primers with interprimer homology: 0
+Primers with one or more (4-mer or compound 4-mer) repeats: 2
+
+Primer ID: IgG_nested
+Original Sequence: SGATGGGCCCTTGGTGGARGC
+IUPAC-resolved Sequence: GGATGGGCCCTTGGTGGAAGC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 58.66 °C
+Primers with Tm within ±5°C: 4 / 5 (80.00%)
+Self-homology (3-base complementary matches):
+    Triplet 'GGG' found at positions 5 and 8
+    Triplet 'GGC' found at positions 6 and 7
+    Triplet 'GCC' found at positions 7 and 6
+    Triplet 'CCC' found at positions 8 and 5
+    Triplet 'CTT' found at positions 10 and 18
+    Triplet 'AAG' found at positions 18 and 10
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: IgM_nested
+Original Sequence: GGTTGGGGCGGATGCACTCC
+IUPAC-resolved Sequence: GGTTGGGGCGGATGCACTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 58.60 °C
+Primers with Tm within ±5°C: 4 / 5 (80.00%)
+Self-homology (3-base complementary matches):
+    Triplet 'GGA' found at positions 10 and 18
+    Triplet 'TGC' found at positions 13 and 14
+    Triplet 'GCA' found at positions 14 and 13
+    Triplet 'TCC' found at positions 18 and 10
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 5 to 8
+
+Primer ID: IgA_nested
+Original Sequence: CTTGGGGCTGGTCGGGGATG
+IUPAC-resolved Sequence: CTTGGGGCTGGTCGGGGATG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 58.60 °C
+Primers with Tm within ±5°C: 4 / 5 (80.00%)
+No self-homology detected.
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 4 to 7
+    mono-repeat: 'GGGG' from position 14 to 17
+
+Primer ID: IgKC_nested
+Original Sequence: AGATGGTGCAGCCACAGTTC
+IUPAC-resolved Sequence: AGATGGTGCAGCCACAGTTC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 52.45 °C
+Primers with Tm within ±5°C: 2 / 5 (40.00%)
+Self-homology (3-base complementary matches):
+    Triplet 'TGG' found at positions 4 and 12
+    Triplet 'GTG' found at positions 6 and 13
+    Triplet 'TGC' found at positions 7 and 8
+    Triplet 'GCA' found at positions 8 and 7
+    Triplet 'CCA' found at positions 12 and 4
+    Triplet 'CAC' found at positions 13 and 6
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: IgLC_nested
+Original Sequence: GAGGGYGGGAACAGAGTGAC
+IUPAC-resolved Sequence: GAGGGTGGGAACAGAGTGAC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 54.50 °C
+Primers with Tm within ±5°C: 5 / 5 (100.00%)
+No self-homology detected.
+No interprimer homology detected.
+No repeats detected.
+

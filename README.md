@@ -1,7 +1,7 @@
 ## Overview
-This repository holds script(s) used in the generation of OE-RT-PCR primers for any organism for which the user has heavy and light chain V and C gene sequences. Here, ferret sequences are used as example input and outputs, contained in the subdirectories.
+This repository holds script(s) used in the generation of BCRseq OE-RT-PCR primers compatible with any organism for which the user possesses heavy and light chain V and C gene sequences. Here, ferret sequences are used as example to demonstrate necessary inputs and expected outputs.
 
-Important note: these scripts cannot be used alone for primer generation. They serve as a first step. The "overlap" subsequences of primers required for overlap-extension-RT-PCR must be added, then melting temperatures and primer compatibility must be simulated with e.g. [IDT tools](https://www.idtdna.com/pages/tools/primerquest?utm_source=google&utm_medium=cpc&utm_campaign=00588_1i_03&utm_content=search&gad_source=1&gclid=Cj0KCQiA2oW-BhC2ARIsADSIAWqLLeU8xxYsdb8FC8H3mHMXEwgz3zivyRlAaNtvaHjE65R4VGVlCs8aAobeEALw_wcB). Finally, primers must be tested to the user's satisfaction *in vitro* to ensure amplicon length and depth of gene capture.
+Note: these scripts cannot be used alone for perfect primer generation. They merely serve as helpful tools. Currently, the "overlap" and "common" subsequences of primers required for overlap-extension-RT-PCR must be added manually. Finally, primers must be tested to the user's satisfaction *in vitro* to ensure amplicon length and depth of gene capture.
 
 ## Background
 
@@ -15,20 +15,20 @@ These papers focused on human BCR genes. For myriad reasons including the applic
 ## Contents
 - `generate_primers.py`: This script takes a FASTA file of some target V gene sequences (e.g. heavy chain V gene framework 1 sequences) and a handful of user provided parameters such as range of allowable primer length, number of allowable degenerate nucleotide positions, etc. It outputs suggested primers and their corresponding target sequences.
 
+- `IG*V` directories: include both the necessary input files for designing ferret bcrseq V gene primers (e.g. "ighv_fam1.fasta") as well as the output from "generate_primers.py"
+
 - `bad_c_areas.py`: This script takes a FASTA file of all target C gene sequences and searches for areas to avoid priming due to perfect shared homology between two or more C genes.
 
-- Four-letter directories such as `IGHV` include both the necessary input files for designing ferret primers (e.g. `ighv_fam1.fasta`) as well as the output from `generate_primers.py`
-
-- `all_Cs`: Includes the relevant input ferret C gene sequences tested for undesirable priming areas using `bad_c_areas.py` as well as the output and resulting manually chosen C gene primer sequence choies.
-
 - `revcomp.py`: Small script that simply takes an input FASTA and creates a new FASTA with reverse compliment versions of the input's sequences. Can be helpful when manually designing C gene primers.
+
+- `all_Cs`: Includes the relevant input ferret C gene sequences tested for undesirable priming areas using "bad_c_areas.py" as well as the output and resulting manually-chosen C gene primer sequence choices.
+
+- `primer_issues.py`: This script takes a FASTA file of all candidate primers in a given reaction mix. It evaluates them for potential issues involving GC clamps, melting temperatures, hidden complementarity, and repeat runs.
 
 - `environment.yml`: Conda environment i.e. dependencies file for ease of setup
 
 ## Helpful resources
 
-- **Getting target gene sequences for your organism**: Assuming your organism's immunoglobulin genes have been sufficiently annotated. [IMGT's gene lookup tool](https://www.imgt.org/genedb/) is highly useful for acquiring the necessary V and C gene sequences/regions used as input for this repository's script(s). 
+- **Getting target gene sequences for your species of interest**: Assuming your organism's immunoglobulin genes have been sufficiently annotated. [IMGT's gene lookup tool](https://www.imgt.org/genedb/) is highly useful for acquiring the necessary V and C gene sequences/regions used as input for this repository's script(s). 
 
 - **Double checking primer targets**: The [Clustal Omega multiple sequence alignment tool](https://www.ebi.ac.uk/jdispatcher/msa/clustalo) is useful for a quick double-check that the primers suggested by `generate_primers.py` do target the user's desired location, and can provide information that informed any degenerate primer positions. 
-
-- **Simulating primer behavior/issues**: [IDT](https://www.idtdna.com/pages/tools/primerquest?utm_source=google&utm_medium=cpc&utm_campaign=00588_1i_03&utm_content=search&gad_source=1&gclid=Cj0KCQiA2oW-BhC2ARIsADSIAWqJSldnoqmAcMCrlltLo1xX62u5B97-xaWZbliHxkra0yiwiJ2StboaAhzLEALw_wcB) provides a number of tools for analyzing primer melting temperatures, undesirable secondary structures, etc. for multiplex PCR primer sets.

@@ -1,0 +1,74 @@
+User Arguments:
+  fasta: ferret_Nested_primers.fasta
+
+Summary:
+Total primers: 5
+Primers with no GC clamp: 0
+Primers with melting temp outside 65-75°C: 5
+Primers with (3-mer) self-homology: 2
+Primers with interprimer homology: 0
+Primers with one or more (4-mer or compound 4-mer) repeats: 3
+
+Primer ID: IgA_Nested
+Original Sequence: ACTGGGGCTGGCTTTGGGCT
+IUPAC-resolved Sequence: ACTGGGGCTGGCTTTGGGCT
+GC Clamp: Sufficient
+Melting Temperature (Tm): 56.55 °C
+Primers with Tm within ±5°C: 5 / 5 (100.00%)
+No self-homology detected.
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 4 to 7
+
+Primer ID: IgG_Nested
+Original Sequence: CGATGGGGCCGTGGTGGAAG
+IUPAC-resolved Sequence: CGATGGGGCCGTGGTGGAAG
+GC Clamp: Sufficient
+Melting Temperature (Tm): 58.60 °C
+Primers with Tm within ±5°C: 4 / 5 (80.00%)
+Self-homology (3-base complementary matches):
+    Triplet 'GGC' found at positions 7 and 8
+    Triplet 'GCC' found at positions 8 and 7
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 5 to 8
+
+Primer ID: IgM_Nested
+Original Sequence: GTTTGGAGGGGATGGGTTCT
+IUPAC-resolved Sequence: GTTTGGAGGGGATGGGTTCT
+GC Clamp: Sufficient
+Melting Temperature (Tm): 52.45 °C
+Primers with Tm within ±5°C: 3 / 5 (60.00%)
+No self-homology detected.
+No interprimer homology detected.
+Repeats detected:
+    mono-repeat: 'GGGG' from position 8 to 11
+
+Primer ID: IgLC_Nested
+Original Sequence: GGGTGCSGARGTGGGCTGAC
+IUPAC-resolved Sequence: GGGTGCGGAAGTGGGCTGAC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 58.60 °C
+Primers with Tm within ±5°C: 4 / 5 (80.00%)
+No self-homology detected.
+No interprimer homology detected.
+No repeats detected.
+
+Primer ID: IgKC_Nested
+Original Sequence: GGATGGCTGGGCATCATTCC
+IUPAC-resolved Sequence: GGATGGCTGGGCATCATTCC
+GC Clamp: Sufficient
+Melting Temperature (Tm): 54.50 °C
+Primers with Tm within ±5°C: 5 / 5 (100.00%)
+Self-homology (3-base complementary matches):
+    Triplet 'GGA' found at positions 1 and 18
+    Triplet 'GAT' found at positions 2 and 13
+    Triplet 'ATG' found at positions 3 and 12
+    Triplet 'ATG' found at positions 3 and 15
+    Triplet 'CAT' found at positions 12 and 3
+    Triplet 'ATC' found at positions 13 and 2
+    Triplet 'CAT' found at positions 15 and 3
+    Triplet 'TCC' found at positions 18 and 1
+No interprimer homology detected.
+No repeats detected.
+
