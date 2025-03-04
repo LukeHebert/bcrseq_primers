@@ -1,5 +1,5 @@
 ## Overview
-This repository holds script(s) used in the generation of BCRseq OE-RT-PCR primers compatible with any organism for which the user possesses heavy and light chain V and C gene sequences. Here, ferret sequences are used as example to demonstrate necessary inputs and expected outputs.
+This repository holds script(s) used in the generation of BCRseq "OE-RT-PCR" and "Nested" primers compatible with any organism for which the user possesses heavy and light chain V and C gene sequences. Here, ferret sequences are used as example to demonstrate necessary inputs and expected outputs.
 
 Note: these scripts cannot be used alone for perfect primer generation. They merely serve as helpful tools. Currently, the "overlap" and "common" subsequences of primers required for overlap-extension-RT-PCR must be added manually. Finally, primers must be tested to the user's satisfaction *in vitro* to ensure amplicon length and depth of gene capture.
 
