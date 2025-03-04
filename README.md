@@ -9,7 +9,7 @@ Note: these scripts cannot be used alone for perfect primer generation. They mer
 - [McDaniel JR, DeKosky BJ, Tanno H, Ellington AD, Georgiou G. Ultra-high-throughput sequencing of the immune receptor repertoire from millions of lymphocytes. Nat Protoc. 2016 Mar;11(3):429-42. doi: 10.1038/nprot.2016.024. Epub 2016 Feb 4. PMID: 26844430.](https://pubmed.ncbi.nlm.nih.gov/26844430/)
 - [Tanno H, McDaniel JR, Stevens CA, Voss WN, Li J, Durrett R, Lee J, Gollihar J, Tanno Y, Delidakis G, Pothukuchy A, Ellefson JW, Goronzy JJ, Maynard JA, Ellington AD, Ippolito GC, Georgiou G. A facile technology for the high-throughput sequencing of the paired VH:VL and TCRβ:TCRα repertoires. Sci Adv. 2020 Apr 22;6(17):eaay9093. doi: 10.1126/sciadv.aay9093. PMID: 32426460; PMCID: PMC7176429.](https://pmc.ncbi.nlm.nih.gov/articles/PMC7176429/)
 
-These papers focused on human BCR genes. For myriad reasons including the application of BCRseq for biomedical model organisms such as the ferret (the example data used here), this technique would be useful in non-human organisms. This repository's scripts aid in the initial design of overlap-extension reverse-transcription PCR (OE-RT-PCR) as described in the papers above.
+These papers focused on human BCR genes. For myriad reasons (including the application of BCRseq for biomedical model organisms such as the ferret, the example data used here), this technique would be useful in non-human organisms. This repository's scripts aid in the initial design of overlap-extension reverse-transcription PCR (OE-RT-PCR) and subsequent Nested PCR as described in the papers above.
 
 
 ## Contents
