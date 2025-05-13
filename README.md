@@ -1,7 +1,10 @@
 ## Overview
-This repository holds script(s) used in the generation of BCRseq "OE-RT-PCR" and "Nested" primers compatible with any organism for which the user possesses heavy and light chain V and C gene sequences. Here, ferret sequences are used as example to demonstrate necessary inputs and expected outputs. These scripts are MOST helpful in designing the highly multiplex forward (V gene) primers.
+These scripts aid in the generation of BCRseq "OE-RT-PCR" and "Nested" primers for any organism (any organism for which the user possesses heavy and light chain V and C gene sequences; see "Helpful Resources" below). In this repository, ferret sequences are used as example to demonstrate necessary inputs and expected outputs. 
 
-Note: these scripts cannot be used alone for perfect primer generation. They merely serve as helpful tools. Currently, the "overlap" and "common" subsequences of primers required for overlap-extension-RT-PCR must be added manually. Finally, primers must be tested to the user's satisfaction *in vitro* to ensure amplicon length and depth of gene capture.
+### Notes & caveats:
+- The most useful script here is `generate_primers.py`. It helps create the highly multiplexed forward (V gene) primers, which is usually the most tedious component of designing OE-RT-PCR primers.
+- These scripts cannot be used alone for perfect primer generation. Primers must be tested to the user's satisfaction *in vitro* to ensure e.g. expected amplicon length and/or breadth of gene capture.
+- Currently, the "overlap" and "common" subsequences of primers required for overlap-extension-RT-PCR must be added manually.
 
 ## Background
 
@@ -27,14 +30,14 @@ These papers focused on human BCR genes. For myriad reasons (including the appli
 
 - `environment.yml`: Conda environment i.e. dependencies file for ease of setup
 
-## Understanding `generate_primers.py`
+## Understanding how `generate_primers.py` works
 Below is a diagram showing the control structure in the heart of `generate_primers.py`
 ```mermaid
 flowchart TD
     %% ---------- DESIGN_GROUPS() DETAIL ----------
     subgraph DG ["design_groups() – greedy set‑cover"]
         direction TB
-        DG1[/initialize ungrouped target sequences/] --> DG2{"while ungrouped != ∅ (aka while there are still remaining input target sequences to design primers for"}
+        DG1[/initialize ungrouped input target sequences/] --> DG2{"while ungrouped != ∅ (aka while there are still remaining input target sequences to design primers for"}
         DG2 -->|pick a seed target seq| DG3["get_candidate_region() aka trim irrelevant input sequence region(s)"]
         DG3 --> DG4["try every (wiggle × length) parameter combination"]
         DG4 --> DG5["add next target sequences greedily to this group primed by the same primer"]
@@ -60,4 +63,6 @@ flowchart TD
 
 - **Getting target gene sequences for your species of interest**: Assuming your organism's immunoglobulin genes have been sufficiently annotated. [IMGT's gene lookup tool](https://www.imgt.org/genedb/) is highly useful for acquiring the necessary V and C gene sequences/regions used as input for this repository's script(s). 
 
-- **Double checking primer targets**: The [Clustal Omega multiple sequence alignment tool](https://www.ebi.ac.uk/jdispatcher/msa/clustalo) is useful for a quick double-check that the primers suggested by `generate_primers.py` do target the user's desired location, and can provide information that informed any degenerate primer positions. 
+- **Double checking primer targets**: The [Clustal Omega multiple sequence alignment tool](https://www.ebi.ac.uk/jdispatcher/msa/clustalo) is useful for a quick double-check that the primers suggested by `generate_primers.py` do target the user's desired location, and can provide information that informed any degenerate primer positions. Alternatively, to manually compare generated primers to your target sequences, it can be convenient to first make a sequence logo from said targets. The [WebLogo in-browser tool](https://weblogo.berkeley.edu/logo.cgi) makes this easy.
+
+- **Phylogenetic Trees**: Sometimes it is useful to first sub-divide target sequences by hand-picked phylogenetic clades before applying `generate_primers.py`. If the first application of `generate_primers.py` results in more primers than the user wants, I suggest trying this. The [Clustal Omega multiple sequence alignment tool](https://www.ebi.ac.uk/jdispatcher/msa/clustalo) is also useful for this.
