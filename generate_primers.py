@@ -1,32 +1,30 @@
 #!/usr/bin/env python3
 '''
-Reads a single FASTA file of target sequences.
+Reads a single FASTA file of same-length DNA sequences. For these sequences, 
+attempts to generate the minimum number of required primers that will target
+all input sequences in a multiplexed PCR.
 
-Parses a user parameters for primer design such as
-    -primer length range (for example “20-23”), 
-    -a maximum number of allowed degenerate positions, and 
-    -whether to target the “start” or “end” of a sequence with optional target 
-    offset/wiggle room
+User specifices primer design parameters such as primer position (and position 
+tolerances aka "wiggle"), length(s), and maximum allowed degenerate nuclotides.
 
-For each allowed offset (from 0 to the target offset) and for each allowed 
-primer length the script tries seeding a group with one unassigned target 
-and then greedily adds other primable sequence targets if the consensus 
-(computed column by column and “degeneratized” via IUPAC codes when needed) does
-not exceed the allowed number of degenerate positions. (Recall that a 
-“degenerate” column is one where the target nucleotides are not unanimous.)
+For each allowed wiggle (0-primer_wiggle) and each allowed primer length the
+script tries seeding a group with one unassigned target sequence & then greedily adds
+other primable sequence targets if the consensus (computed column by column and
+“degeneratized” via IUPAC codes when needed) does not exceed the allowed number
+of degenerate positions and those degenerate positions are not near the 3' end.
 
-It then picks the candidate primers that cover the most primable sequences (and,
-when tied, prefers the longer primer) and removes those targets from further 
-consideration.
+It then picks the candidate primers that cover the most primable sequences
+(and, when tied, prefers the longer primer) and removes those target seqs from
+further consideration.
 
-Finally, it writes 
-    -one FASTA file per group (with the group’s targets)
-    -one FASTA file of the primer sequences (with a header that notes the unique 
-    group/primer id and the list of target ids covered), and 
-    -a TSV file that lists each target, its group assignment, and the final 
-    primer sequence.
+Finally, it writes
+    – one FASTA file of the primer sequences (with a header that notes the
+     the list of input sequences targeted), 
+    – one FASTA file per input target sequence group primed by a shared primer  
+    – a TSV file that lists each target, its group assignment, and its group's 
+        primer sequence.
 
-(Note that primer design is a minimal set–cover problem, which is NP-hard; 
+(Note that primer design is a minimal set–cover problem, which is NP-hard;
 this script uses one of multiple possible heuristics to solve the problem.)
 '''
 
@@ -39,21 +37,30 @@ from Bio.SeqRecord import SeqRecord
 
 def parse_args():
     """
-    Parse command line arguments.
+    Parse command-line arguments.
     """
     parser = argparse.ArgumentParser(
         description="Design degenerate primers covering target sequences with minimal primer groups."
     )
     parser.add_argument("input_fasta", help="Input FASTA file with target sequences")
-    parser.add_argument("--primer_length_range", required=True, help="Allowed primer lengths, e.g. '20-23'")
-    parser.add_argument("--max_degenerate", type=int, required=True, help="Maximum number of degenerate positions allowed in any primer")
-    parser.add_argument("--target", choices=["start", "end"], required=True,
-                        help="Whether the primer should target the 'start' or 'end' of the sequence")
-    parser.add_argument("--target_offset", type=int, default=0,
-                        help="Optional shift (in nucleotides) allowed from the designated position (default: 0)")
+    parser.add_argument("--primer_length_range", required=True,
+                        help="Allowed primer lengths, e.g. '20-23'")
+    parser.add_argument("--max_degenerate", type=int, required=True,
+                        help="Maximum number of degenerate positions allowed in any primer")
+    parser.add_argument("--prime_side", choices=["start", "end"], required=True,
+                        help="Whether the primer should anneal to the 'start' or 'end' of the target sequences")
+    parser.add_argument("--prime_offset", type=int, default=0,
+                        help="Number of bases to skip from the chosen end before primer design "
+                             "(1-indexed to the user; e.g. --prime_side start --prime_offset 2 "
+                             "ignores positions 1 and 2).")
+    parser.add_argument("--prime_wiggle", type=int, default=0,
+                        help="How far the primer may be shifted inward from the offset anchor.")
     parser.add_argument("--orientation", choices=["fwd", "rev"], default="fwd",
                         help="Primer orientation: 'fwd' (default) for forward or 'rev' for reverse complement output")
-    parser.add_argument("--output_prefix", default="output", help="Prefix for output files (placed in the input FASTA directory)")
+    parser.add_argument("--nondegenerate_tail", type=int, default=0,
+                        help="Require the last X (3′) positions to be non-degenerate (A/C/G/T only).")
+    parser.add_argument("--output_prefix", default="output",
+                        help="Prefix for output files (placed in the input FASTA directory)")
     return parser.parse_args()
 
 def parse_fasta(filename):
@@ -65,25 +72,26 @@ def parse_fasta(filename):
         sequences[record.id] = str(record.seq)
     return sequences
 
-def get_candidate_region(seq, target, offset, length):
+def get_candidate_region(seq, side, offset_skip, wiggle, length):
     """
-    Extract a candidate region given a sequence, target position, offset, and primer length.
+    Extract a candidate region given a sequence, side of target to prime, an initial
+    offset to skip, an additional inward wiggle, and primer length.
+
+    offset_skip – bases excluded from the sequence end  
+    wiggle      – additional shift (0-prime_wiggle) applied by the algorithm
     """
-    if target == "start":
-        if offset + length <= len(seq):
-            return seq[offset:offset+length]
-        else:
-            return None
-    elif target == "end":
-        if length + offset <= len(seq):
-            if offset == 0:
-                return seq[-length:]
-            else:
-                return seq[-(length+offset):-offset]
-        else:
-            return None
-    else:
+    if side == "start":
+        pos = offset_skip + wiggle          # 0-based index of primer start
+        if pos + length <= len(seq):
+            return seq[pos:pos + length]
         return None
+    elif side == "end":
+        end_idx   = len(seq) - offset_skip - wiggle      # index after last primer base
+        start_idx = end_idx - length
+        if start_idx >= 0:
+            return seq[start_idx:end_idx]
+        return None
+    return None
 
 def degenerate_code(nucs):
     """
@@ -110,9 +118,8 @@ def degenerate_code(nucs):
 
 def compute_consensus(seqs):
     """
-    Given a list of sequences (all of the same length), compute the consensus sequence.
-    In each column, if nucleotides are unanimous, that nucleotide is used; otherwise, the corresponding 
-    degenerate nucleotide code is used. Also counts the number of degenerate positions.
+    Given a list of sequences (all the same length), compute the consensus
+    sequence and count how many positions are degenerate.
     """
     if not seqs:
         return "", 0
@@ -120,156 +127,138 @@ def compute_consensus(seqs):
     consensus = []
     degenerate_count = 0
     for i in range(length):
-        column = {seq[i] for seq in seqs}
-        if len(column) == 1:
-            consensus.append(next(iter(column)))
+        col = {s[i] for s in seqs}
+        if len(col) == 1:
+            consensus.append(next(iter(col)))
         else:
             degenerate_count += 1
-            consensus.append(degenerate_code(column))
+            consensus.append(degenerate_code(col))
     return ''.join(consensus), degenerate_count
 
-def design_groups(sequences, target, allowed_offset, min_length, max_length, max_degenerate):
+def tail_is_clean(primer, tail_len):
     """
-    Greedily form groups of targets that can share a primer.
-    
-    For each allowed offset (0..allowed_offset) and each allowed primer length,
-    a seed target is chosen from the unassigned set. Then other targets are added if the
-    consensus of their candidate regions (computed column-by-column) remains within the
-    maximum allowed degenerate positions. The best group is the one that covers the most targets,
-    preferring longer primer lengths when tied.
+    Check whether the last `tail_len` bases of the primer are non-degenerate.
+    """
+    if tail_len == 0:
+        return True
+    tail_len = min(tail_len, len(primer))
+    return all(b in "ACGT" for b in primer[-tail_len:])
+
+def design_groups(sequences, side, offset_skip, allowed_wiggle,
+                  min_length, max_length, max_degenerate, tail_len):
+    """
+    Greedily form groups of target sequences that can share a primer.
+
+    offset_skip     – user-specified --prime_offset  
+    allowed_wiggle  – user-specified --prime_wiggle
     """
     ungrouped = set(sequences.keys())
     groups = []
-    
+
     while ungrouped:
         best_group = None
-        best_off = None
-        best_len = None
-        best_deg = None
-        
-        # Try all allowed offset and primer length combinations.
-        for off in range(allowed_offset + 1):
+        best_off   = None
+        best_len   = None
+        best_deg   = None
+
+        # Try all allowed shifts (from 0 to allowed_wiggle) and primer lengths.
+        for off in range(allowed_wiggle + 1):
             for length in range(min_length, max_length + 1):
-                # For each seed in ungrouped targets, try building a group.
                 for seed in list(ungrouped):
-                    candidate_seed = get_candidate_region(sequences[seed], target, off, length)
-                    if candidate_seed is None:
+                    cand_seed = get_candidate_region(sequences[seed], side,
+                                                    offset_skip, off, length)
+                    if cand_seed is None:
                         continue
-                    current_group = {seed: candidate_seed}
-                    # Try adding every other ungrouped target.
+                    current = {seed: cand_seed}
                     for other in list(ungrouped):
-                        if other in current_group:
+                        if other in current:
                             continue
-                        candidate_other = get_candidate_region(sequences[other], target, off, length)
-                        if candidate_other is None:
+                        cand_other = get_candidate_region(sequences[other], side,
+                                                          offset_skip, off, length)
+                        if cand_other is None:
                             continue
-                        # Build temporary list of candidate regions for current group plus this candidate.
-                        temp_candidates = list(current_group.values()) + [candidate_other]
-                        consensus, deg_count = compute_consensus(temp_candidates)
-                        if deg_count <= max_degenerate:
-                            current_group[other] = candidate_other
-                    group_size = len(current_group)
-                    # Choose best group: first by size, then by longer primer length if tied.
-                    if best_group is None or group_size > len(best_group) or (group_size == len(best_group) and length > best_len):
-                        best_group = current_group.copy()
-                        best_consensus, best_deg = compute_consensus(list(best_group.values()))
-                        best_off = off
-                        best_len = length
-        if best_group is None:
-            # Fallback: assign one target if nothing worked (should not occur in practice)
+                        tmp = list(current.values()) + [cand_other]
+                        consensus, deg = compute_consensus(tmp)
+                        if deg <= max_degenerate and tail_is_clean(consensus, tail_len):
+                            current[other] = cand_other
+                    size = len(current)
+                    if (best_group is None or size > len(best_group) or
+                       (size == len(best_group) and length > best_len)):
+                        best_group = current.copy()
+                        best_cons, best_deg = compute_consensus(list(best_group.values()))
+                        best_off  = off
+                        best_len  = length
+
+        if best_group is None:  # Fallback (should rarely happen)
             seed = next(iter(ungrouped))
-            candidate = get_candidate_region(sequences[seed], target, 0, max_length)
-            if candidate is None:
-                candidate = sequences[seed]
-            best_group = {seed: candidate}
-            best_consensus, best_deg = compute_consensus([candidate])
-            best_off = 0
-            best_len = max_length
-        
+            cand = get_candidate_region(sequences[seed], side,
+                                        offset_skip, 0, max_length)
+            if cand is None:
+                cand = sequences[seed]
+            best_group = {seed: cand}
+            best_cons, best_deg = compute_consensus([cand])
+            best_off  = 0
+            best_len  = max_length
+
         groups.append({
-            'primer': best_consensus,
-            'offset': best_off,
-            'length': best_len,
-            'members': list(best_group.keys()),
+            'primer'          : best_cons,
+            'offset'          : best_off,      # wiggle actually used
+            'length'          : best_len,
+            'members'         : list(best_group.keys()),
             'degenerate_count': best_deg
         })
-        # Remove grouped sequences from further consideration.
-        for s in best_group.keys():
+        for s in best_group:
             ungrouped.discard(s)
     return groups
 
 def write_outputs(groups, sequences, args):
     """
-    Writes output files:
-      1. One FASTA file per group of target sequences (named primer<i>.fasta in a groups directory).
-      2. A single FASTA file of primer sequences (named <output_prefix>_primers.fasta). 
-         Each primer's record header includes a unique group id, its length, number of degenerate positions,
-         number of targets it covers, and the list of target IDs.
-      3. A TSV file (<output_prefix>_primer_assignments.tsv) enumerating each target, the group it belongs to,
-         and the final primer sequence.
+    Write one FASTA per target sequence group, a primer FASTA, and a TSV map.
     """
-    # Determine the directory of the input FASTA and prepare output paths.
     input_dir = os.path.dirname(os.path.abspath(args.input_fasta))
-    output_prefix = os.path.join(input_dir, args.output_prefix)
-    groups_dir = output_prefix + "_groups"
-    os.makedirs(groups_dir, exist_ok=True)
-    
-    # If orientation is "rev", update primer sequences to be reverse complements.
+    prefix = os.path.join(input_dir, args.output_prefix)
+    grp_dir = prefix + "_groups"
+    os.makedirs(grp_dir, exist_ok=True)
+
     if args.orientation == "rev":
-        for group in groups:
-            group['primer'] = str(Seq(group['primer']).reverse_complement())
-    
-    # Prepare primer FASTA records and TSV data.
+        for g in groups:
+            g['primer'] = str(Seq(g['primer']).reverse_complement())
+
     primer_records = []
     tsv_lines = ["Target\tGroup\tPrimer"]
-    
-    for i, group in enumerate(groups, start=1):
-        group_id = f"primer{i}"
-        num_targets = len(group['members'])
-        length = group['length']
-        degenerate_count = group['degenerate_count']
-        target_list = ",".join(group['members'])
-        
-        # Create a SeqRecord for the primer with extended header information.
-        rec = SeqRecord(Seq(group['primer']),
-                        id=group_id,
-                        description=f"len:{length} degenerate:{degenerate_count} targets:{num_targets} covers:{target_list}")
+
+    for idx, g in enumerate(groups, start=1):
+        gid = f"primer{idx}"
+        rec = SeqRecord(Seq(g['primer']),
+                        id=gid,
+                        description=f"len:{g['length']} degenerate:{g['degenerate_count']} "
+                                    f"targets:{len(g['members'])} covers:{','.join(g['members'])}")
         primer_records.append(rec)
-        
-        # Write group FASTA file with the target sequences.
-        group_filename = os.path.join(groups_dir, f"{group_id}.fasta")
-        group_records = []
-        for tid in group['members']:
-            target_record = SeqRecord(Seq(sequences[tid]),
-                                      id=tid,
-                                      description="")
-            group_records.append(target_record)
-            tsv_lines.append(f"{tid}\t{group_id}\t{group['primer']}")
-        SeqIO.write(group_records, group_filename, "fasta")
-    
-    # Write the primer FASTA file.
-    primer_fasta_file = output_prefix + "_primers.fasta"
-    SeqIO.write(primer_records, primer_fasta_file, "fasta")
-    
-    # Write the TSV file.
-    tsv_file = output_prefix + "_primer_assignments.tsv"
-    with open(tsv_file, "w") as tf:
+
+        grp_file = os.path.join(grp_dir, f"{gid}.fasta")
+        grp_records = [SeqRecord(Seq(sequences[tid]), id=tid, description="")
+                       for tid in g['members']]
+        SeqIO.write(grp_records, grp_file, "fasta")
+        for tid in g['members']:
+            tsv_lines.append(f"{tid}\t{gid}\t{g['primer']}")
+
+    SeqIO.write(primer_records, prefix + "_primers.fasta", "fasta")
+    with open(prefix + "_primer_assignments.tsv", "w") as tf:
         tf.write("\n".join(tsv_lines) + "\n")
 
 def main():
     """
     Main function:
-      - Parses arguments.
-      - Reads input sequences from the FASTA file.
-      - Designs primer groups using a greedy heuristic.
-      - Writes output files (group FASTA files, primer FASTA, and a TSV assignment file).
+      – Parse arguments  
+      – Read input FASTA  
+      – Design primer groups  
+      – Write outputs
     """
     args = parse_args()
-    # Parse primer length range (e.g. "20-23")
     try:
-        min_length, max_length = map(int, args.primer_length_range.split("-"))
+        min_len, max_len = map(int, args.primer_length_range.split("-"))
     except Exception:
-        print("Error parsing primer_length_range. Please provide in the format min-max (e.g. 20-23).")
+        print("Error parsing primer_length_range. Use min-max (e.g. 20-23).")
         return
 
     sequences = parse_fasta(args.input_fasta)
@@ -277,14 +266,18 @@ def main():
         print("No sequences found in the input FASTA.")
         return
 
-    groups = design_groups(sequences, args.target, args.target_offset, min_length, max_length, args.max_degenerate)
+    groups = design_groups(sequences, args.prime_side,
+                           args.prime_offset, args.prime_wiggle,
+                           min_len, max_len,
+                           args.max_degenerate, args.nondegenerate_tail)
     write_outputs(groups, sequences, args)
-    
+
+    base = os.path.dirname(os.path.abspath(args.input_fasta))
     print(f"Designed {len(groups)} primer group(s).")
     print("Outputs written to the same directory as the input FASTA:")
-    print(f" - Primer FASTA file: {os.path.join(os.path.dirname(os.path.abspath(args.input_fasta)), args.output_prefix + '_primers.fasta')}")
-    print(f" - TSV assignments: {os.path.join(os.path.dirname(os.path.abspath(args.input_fasta)), args.output_prefix + '_primer_assignments.tsv')}")
-    print(f" - Group FASTA files are in: {os.path.join(os.path.dirname(os.path.abspath(args.input_fasta)), args.output_prefix + '_groups')}")
+    print(f" - Primer FASTA : {os.path.join(base, args.output_prefix + '_primers.fasta')}")
+    print(f" - TSV mapping  : {os.path.join(base, args.output_prefix + '_primer_assignments.tsv')}")
+    print(f" - Group FASTAs : {os.path.join(base, args.output_prefix + '_groups')}")
 
 if __name__ == "__main__":
     main()

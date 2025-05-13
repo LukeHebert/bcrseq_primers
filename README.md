@@ -1,5 +1,5 @@
 ## Overview
-This repository holds script(s) used in the generation of BCRseq "OE-RT-PCR" and "Nested" primers compatible with any organism for which the user possesses heavy and light chain V and C gene sequences. Here, ferret sequences are used as example to demonstrate necessary inputs and expected outputs.
+This repository holds script(s) used in the generation of BCRseq "OE-RT-PCR" and "Nested" primers compatible with any organism for which the user possesses heavy and light chain V and C gene sequences. Here, ferret sequences are used as example to demonstrate necessary inputs and expected outputs. These scripts are MOST helpful in designing the highly multiplex forward (V gene) primers.
 
 Note: these scripts cannot be used alone for perfect primer generation. They merely serve as helpful tools. Currently, the "overlap" and "common" subsequences of primers required for overlap-extension-RT-PCR must be added manually. Finally, primers must be tested to the user's satisfaction *in vitro* to ensure amplicon length and depth of gene capture.
 
@@ -26,6 +26,35 @@ These papers focused on human BCR genes. For myriad reasons (including the appli
 - `primer_issues.py`: This script takes a FASTA file of all candidate primers in a given reaction mix. It evaluates them for potential issues involving GC clamps, melting temperatures, hidden complementarity, and repeat runs.
 
 - `environment.yml`: Conda environment i.e. dependencies file for ease of setup
+
+## Understanding `generate_primers.py`
+Below is a diagram showing the control structure in the heart of `generate_primers.py`
+```mermaid
+flowchart TD
+    %% ---------- DESIGN_GROUPS() DETAIL ----------
+    subgraph DG ["design_groups() – greedy set‑cover"]
+        direction TB
+        DG1[/initialize ungrouped target sequences/] --> DG2{"while ungrouped != ∅ (aka while there are still remaining input target sequences to design primers for"}
+        DG2 -->|pick a seed target seq| DG3["get_candidate_region() aka trim irrelevant input sequence region(s)"]
+        DG3 --> DG4["try every (wiggle × length) parameter combination"]
+        DG4 --> DG5["add next target sequences greedily to this group primed by the same primer"]
+        DG5 --> DG6["compute_consensus()"]
+        DG6 --> DG7{"is the consensus's (degenerate ≤ max) AND (3'‑tail clean)?"}
+        DG7 -- "yes" --> DG8["update best_group"]
+        DG7 -- "no"  --> DG4
+        DG8 --> DG9{"already tested all target seqs?"}
+        DG9 -- "no"  --> DG4
+        DG9 -- "yes" --> DG10["record primer + its target seqs"]
+        DG10 --> DG11["remove target seqs from ungrouped"]
+        DG11 --> DG2
+    end
+
+    %% Optional styling (safe on GitHub)
+    classDef dgStyle fill:#e1f5fe,stroke:#0288d1,stroke-width:1px;
+    classDef woStyle fill:#fff3e0,stroke:#fb8c00,stroke-width:1px;
+    class DG dgStyle;
+    class WO woStyle;
+```
 
 ## Helpful resources
 
