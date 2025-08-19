@@ -30,7 +30,7 @@ The above papers focused on human BCR genes and already provides emperically val
 
 - `environment.yml`: Conda environment i.e. dependencies file for ease of setup
 
-# Helpful resources
+## Helpful resources
 
 - **Getting target gene sequences for your species of interest**: Assuming your organism's immunoglobulin genes have been sufficiently annotated. [IMGT's gene lookup tool](https://www.imgt.org/genedb/) is highly useful for acquiring the necessary V and C gene sequences/regions used as input for this repository's script(s). 
 
