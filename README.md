@@ -42,7 +42,7 @@ The above papers focused on human BCR genes and already provides emperically val
 
 ```mermaid
 graph TD
-A["Read settings (target end,<br>primer lengths, degeneracy limits)"] --> B["Load sequences from FASTA"]
+A["Read settings (target end,<br>primer lengths, degeneracy <br>limits)"] --> B["Load sequences from FASTA"]
 B --> C{"Any sequences found?"}
 C -- "No" --> D["Stop: No sequences found"]
 C -- "Yes" --> E["Begin primer-group design <br>loop. List target <br>sequences still needing<br> primers"]
