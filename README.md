@@ -42,15 +42,15 @@ The above papers focused on human BCR genes and already provides emperically val
 
 ```mermaid
 graph TD
-A["Read settings (target end, primer lengths, degeneracy limits)"] --> B["Load sequences from FASTA"]
+A["Read settings (target end,<br>primer lengths, degeneracy limits)"] --> B["Load sequences from FASTA"]
 B --> C{"Any sequences found?"}
 C -- "No" --> D["Stop: No sequences found"]
-C -- "Yes" --> E["Begin primer-group design loop. List target sequences still needing primers"]
+C -- "Yes" --> E["Begin primer-group design loop. List<br>target sequences still<br>needing primers"]
 E --> F{"Any sequences left uncovered?"}
-F -- "No" --> G["All targets assigned. Write outputs: primers.fasta, primer_assignments.tsv, one FASTA per target group sharing a primer. Print summary. Finished."]
-F -- "Yes" --> H["Test combos of: position wiggle + primer length + seed target sequence"]
-H --> I["With current seed, add all other uncovered target sequences that can share a degenerate consensus primer (within overall degeneracy limit and with clean 3-prime tail)"]
-I --> J["Choose primer candidate covering the most targets (prefer longer primer if tied)"]
-J --> K["Save that primer group & mark the target sequences as covered"]
+F -- "No" --> G["All targets assigned. Write outputs:<br>primers.fasta, primer_assignments.tsv,<br>one FASTA per target group<br>sharing a primer. Print summary."]
+F -- "Yes" --> H["Test combos of: position<br>wiggle + primer length +<br>seed target sequence"]
+H --> I["With current seed, add<br>all other uncovered target<br>sequences that can share<br>a degenerate consensus primer<br>(within overall degeneracy limit<br>and with clean 3-prime tail)"]
+I --> J["Choose primer candidate covering<br>the most targets (prefer<br>longer primer if tied)"]
+J --> K["Save that primer group & mark<br>the target sequences<br>as covered"]
 K --> F
 ```
