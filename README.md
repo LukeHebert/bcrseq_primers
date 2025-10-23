@@ -38,135 +38,19 @@ The above papers focused on human BCR genes and already provides emperically val
 
 - **Phylogenetic Trees**: Sometimes it is useful to first sub-divide target sequences by hand-picked phylogenetic clades before applying `generate_primers.py`. If the first application of `generate_primers.py` results in more primers than the user wants, I suggest trying this. The [Clustal Omega multiple sequence alignment tool](https://www.ebi.ac.uk/jdispatcher/msa/clustalo) is also useful for this.
 
-# Understanding how `generate_primers.py` works
-Below is a diagram showing the control structure in the heart of `generate_primers.py`
+## Diagram of `generate_primers.py` logic:
+
 ```mermaid
-flowchart TD
-    %% ---------- DESIGN_GROUPS() DETAIL ----------
-    subgraph DG ["design_groups() – greedy set‑cover"]
-        direction TB
-        DG1[/initialize ungrouped input target sequences/] --> DG2{"while ungrouped != ∅ (aka while there are still remaining input target sequences to design primers for"}
-        DG2 -->|pick a seed target seq| DG3["get_candidate_region() aka trim irrelevant input sequence region(s)"]
-        DG3 --> DG4["try every (wiggle × length) parameter combination"]
-        DG4 --> DG5["add next target sequences greedily to this group primed by the same primer"]
-        DG5 --> DG6["compute_consensus()"]
-        DG6 --> DG7{"is the consensus's (degenerate ≤ max) AND (3'‑tail clean)?"}
-        DG7 -- "yes" --> DG8["update best_group"]
-        DG7 -- "no"  --> DG4
-        DG8 --> DG9{"already tested all target seqs?"}
-        DG9 -- "no"  --> DG4
-        DG9 -- "yes" --> DG10["record primer + its target seqs"]
-        DG10 --> DG11["remove target seqs from ungrouped"]
-        DG11 --> DG2
-    end
-
-    %% Optional styling (safe on GitHub)
-    classDef dgStyle fill:#e1f5fe,stroke:#0288d1,stroke-width:1px;
-    classDef woStyle fill:#fff3e0,stroke:#fb8c00,stroke-width:1px;
-    class DG dgStyle;
-    class WO woStyle;
-```
-
-# Toy example for `generate_primers.py`:
-
-## **User's Parameters**
-
-* `--prime_side start` (*start from the 5' end of the target sequences. Choosing "end" would target the 3' end.*)
-* `--prime_offset 0` (*this is a vestige of an earlier script design; it combines with --prime_side to determine where on the 5' or 3' end the primable window should start. Here, an offset of 0 means the very first 5' position is where the script will start testing.*)
-* `--prime_wiggle 1` (*allows the desired primable window to be shifted by 1 position at most, in the attempt to generate fewer primers i.e. more target coverage per primer*)
-* `--primer_length_range 7-7` (*A range of allowed primer lengths. Here the only allowed length is 7. In the real world, this range will likely start around 20*)
-* `--max_degenerate 2` (*The number of degenerate nucleotide positions allowed in any given primer. Here, two IUPAC degenerate positions are allowed.*)
-* `--nondegenerate_tail 2` (*The 3' tail of a primer is important for GC clamps. Allowing degeneracy in the tail can be detrimental to primer clamping, so this is the number of 3' positions in which degeneracy is never allowed in the generated primer set.*)
-* `--orientation fwd` (*Relative to the input target sequences, what direction should the generated primers be oriented? fwd = same orientation as the inputs*)
-
-Note: the user decided roughly where GC clamps should be.
-
-## **User's (toy) input sequences**
-Each input sequence must be the same length (in this instance, 12 nt)
-```
-T1 : ATGCC AAGGC AA
-T2 : ATGCT AAGGC AA   (note pos5 C->T)
-T3 : ATGCC AAGGC AA
-T4 : ATGCC GAGGC AA   (note pos6 A->G)
-T5 : ATGCC AAGGC AA
-T6 : GAATC CTGGC AA   (note only last 3 positions conserved with T1-T5)
-T7 : CAATC CTGGC AA   (note only last 3 positions conserved with T1-T5)
-```
-
-## **Algorithm, step-by-step**
-
-### Initialization
-
-* Ungrouped = {T1...T7}
-* Groups = \[]
-
-
-### Pass 1 (Ungrouped has all 7 sequences)
-
-1. Script tries offset=0, len=7 (bases 1..7).
-
-   * For a seed like T1 >> window = `ATGCCAA`.
-   * Adding T2, T3, T4, T5 >> consensus = `ATGCYRA` (Y=C/T, R=A/G). Degeneracy = 2.
-   * Last 2 bases = `RA` >> the `R` is degenerate >> FAILS tail check.
-   * So offset=0 is not usable here.
-
-2. Script tries offset=1, len=7 (bases 2..8).
-
-   * For T1 >> window = `TGCCAAG`.
-   * Adding T2, T3, T4, T5 >> consensus = `TGCYRAG`. Degeneracy = 2.
-   * Last 2 bases = `AG`. Both non-degenerate >> PASSES tail check.
-   * Attempting to add T6 or T7 here blows degeneracy way past 2 (several columns differ) >> rejected.
-   * Best group for this pass = `{T1,T2,T3,T4,T5}`, primer `TGCYRAG`.
-
-3. Record this group, remove its members.
-
-   * Groups = \[primer1 = `TGCYRAG`, members T1-T5]
-   * Ungrouped = {T6,T7}
-
-
-### Pass 2 (Ungrouped = {T6,T7})
-
-1. Script again checks offset=0, len=7.
-
-   * T6 window = `GAATCCT`
-   * T7 window = `CAATCCT`
-   * Consensus = `RAATCCT` (R=G/C), degeneracy = 1.
-   * Last 2 bases = `CT` >> non-degenerate >> PASSES tail check.
-
-2. Best group for this pass = `{T6,T7}`, primer `RAATCCT`.
-
-3. Record group, remove members.
-
-   * Groups = \[primer1, primer2]
-   * Ungrouped = ∅ >> stop.
-
-
-## **Final Output**
-
-### Primer FASTA
-
-(Includes primer metadata in the record descriptions)
-```
->primer1 len:7 degenerate:2 targets:5 covers:T1,T2,T3,T4,T5
-TGCYRAG
->primer2 len:7 degenerate:1 targets:2 covers:T6,T7
-RAATCCT
-```
-
-### Group FASTAs
-
-* `primer1.fasta` contains sequences of T1-T5
-* `primer2.fasta` contains sequences of T6-T7
-
-### TSV primer-target mappings
-
-```
-Target  Group    Primer
-T1      primer1  TGCYRAG
-T2      primer1  TGCYRAG
-T3      primer1  TGCYRAG
-T4      primer1  TGCYRAG
-T5      primer1  TGCYRAG
-T6      primer2  RAATCCT
-T7      primer2  RAATCCT
+graph TD
+A["Read settings (target end, primer lengths, degeneracy limits)"] --> B["Load sequences from FASTA"]
+B --> C{"Any sequences found?"}
+C -- "No" --> D["Stop: No sequences found"]
+C -- "Yes" --> E["Begin primer-group design loop. List target sequences still needing primers"]
+E --> F{"Any sequences left uncovered?"}
+F -- "No" --> G["All targets assigned. Write outputs: primers.fasta, primer_assignments.tsv, one FASTA per target group sharing a primer. Print summary. Finished."]
+F -- "Yes" --> H["Test combos of: position wiggle + primer length + seed target sequence"]
+H --> I["With current seed, add all other uncovered target sequences that can share a degenerate consensus primer (within overall degeneracy limit and with clean 3-prime tail)"]
+I --> J["Choose primer candidate covering the most targets (prefer longer primer if tied)"]
+J --> K["Save that primer group & mark the target sequences as covered"]
+K --> F
 ```
