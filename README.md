@@ -45,12 +45,12 @@ graph TD
 A["Read settings (target end,<br>primer lengths, degeneracy limits)"] --> B["Load sequences from FASTA"]
 B --> C{"Any sequences found?"}
 C -- "No" --> D["Stop: No sequences found"]
-C -- "Yes" --> E["Begin primer-group design loop. List<br>target sequences still<br>needing primers"]
-E --> F{"Any sequences left uncovered?"}
-F -- "No" --> G["All targets assigned. Write outputs:<br>primers.fasta, primer_assignments.tsv,<br>one FASTA per target group<br>sharing a primer. Print summary."]
+C -- "Yes" --> E["Begin primer-group design <br>loop. List target <br>sequences still needing<br> primers"]
+E --> F{"Any sequences left <br>uncovered?"}
+F -- "No" --> G["All targets assigned. <br>Write outputs:primers.fasta,<br> primer_assignments.tsv, <br>one FASTA per target group<br>sharing a primer. <br>Print summary."]
 F -- "Yes" --> H["Test combos of: position<br>wiggle + primer length +<br>seed target sequence"]
-H --> I["With current seed, add<br>all other uncovered target<br>sequences that can share<br>a degenerate consensus primer<br>(within overall degeneracy limit<br>and with clean 3-prime tail)"]
-I --> J["Choose primer candidate covering<br>the most targets (prefer<br>longer primer if tied)"]
-J --> K["Save that primer group & mark<br>the target sequences<br>as covered"]
+H --> I["With current seed, add<br>all other uncovered target<br>sequences that can share<br>a degenerate consensus primer<br>(within overall degeneracy limit<br>and with clean <br>3-prime tail)"]
+I --> J["Choose primer candidate <br>covering the most targets<br> (prefer longer primer <br>if tied)"]
+J --> K["Save that primer <br>group & mark the <br> target sequences as<br> covered"]
 K --> F
 ```
